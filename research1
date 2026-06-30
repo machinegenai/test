@@ -1,0 +1,285 @@
+# External Frameworks, Tools & Methodologies for Enterprise AI Governance
+
+*Pure external research, company-agnostic. Organized strictly by the requested hierarchy: Section A (A1–A4), Section B (B1–B3), Section C (C1–C3). Each leaf is treated as its own research target with named frameworks, origins, components, and application.*
+
+## TL;DR
+- This report maps the established, company-agnostic external frameworks for ten distinct enterprise-AI-governance leaves, anchored on authoritative sources — NIST (AI RMF, AI 600-1, SP 800-61r3), ISO/IEC 42001, OECD AI Principles, the EU AI Act, OWASP, Gartner/McKinsey/BCG/Deloitte, and the published responsible-AI principles of Walmart, Google, Microsoft, IBM, Salesforce, Anthropic and OpenAI.
+- Across all three sections the same backbone recurs: NIST AI RMF's **MAP** function structures intake/scoping; **GOVERN** structures lifecycle decision rights; **MEASURE** structures KPI tracking; and **MANAGE** (with NIST SP 800-61r3) structures incident escalation — with consultancy scoring models (RICE/ICE/weighted matrices, value-vs-feasibility 2x2s) and measurement frameworks (McKinsey five-layer, SPACE, DevEx) layered on top.
+- The dominant cross-cutting finding is that pilots fail at the scaling gate for organizational, not technical, reasons — per BCG's October 24, 2024 report *Where's the Value in AI?* (survey of 1,000 CxOs/senior executives across 59 countries), "only 26 per cent of the companies have developed the necessary set of capabilities to move beyond proofs of concept and generate tangible value," and just 4% generate significant value across functions — so the highest-leverage frameworks are those that impose stage-gates, named decision rights, baselined measurement, and least-privilege governance of agents and connectors.
+
+## Key Findings
+1. **Intake (A1) is a MAP-function problem.** Leading templates converge on four field clusters — Use-Case Basics, Risk Signals, Business Value, Stakeholder Information — directly traceable to NIST AI RMF MAP and ISO/IEC 42001 documentation requirements.
+2. **Scoping KPIs (A2) and prioritization (A3) are separate disciplines.** A2 scores candidate *quality* (value potential, feasibility, data readiness, risk, strategic alignment, time-to-value); A3 *ranks* candidates using RICE, ICE, weighted scoring, MoSCoW, value-vs-feasibility 2x2s, and Gartner's prioritization funnel.
+3. **Lifecycle governance (A4)** is best built from NIST AI RMF GOVERN + ISO/IEC 42001's AIMS management-system structure, with stage-gates and named decision rights (RACI for tasks, RAPID/DACI for decisions).
+4. **Measurement (B1/B2)** has matured: McKinsey's five-layer framework, the SPACE and DevEx developer-productivity frameworks, Microsoft's Work Trend Index/Copilot measurement, and a benefit-minus-cost "AI value equation" provide the parameters; FinOps and CoE ownership models operationalize them.
+5. **Scaling (B3)** is the recognized failure point; consultancies define explicit pilot-to-scale gates and "scale/fix/kill" criteria.
+6. **Public-facing principles (C1)** cluster on ~7 common themes (fairness, transparency, accountability, privacy, security, human oversight, reliability/safety), grounded in the OECD AI Principles and EU AI Act transparency duties.
+7. **Agentic AI & connectors (C2)** are governed by NIST AI 600-1, OWASP Top 10 for LLMs/Agentic Apps, and vendor frameworks emphasizing least-privilege, human-in-the-loop and audit trails.
+8. **Incident escalation (C3)** adapts NIST SP 800-61r3 and the AI RMF MANAGE function, plus the AI Incident Database.
+
+---
+
+## Details
+
+# SECTION A — Strategic AI Use-Case Scoping
+
+## LEAF A1 — Intake Forms
+
+**What the leaf needs:** a standardized capture mechanism that gates AI work at idea stage and supplies reviewers exactly the information needed to triage.
+
+### Framework 1 — NIST AI RMF "MAP" function (origin: NIST, AI RMF 1.0, January 2023)
+The MAP function frames an AI system's context, purpose, stakeholders, and potential harms so an organization can make "an initial go/no-go decision about whether to design, develop, or deploy an AI system." MAP categories that translate directly into intake fields: intended purpose and context of use; stakeholders and affected communities; system boundaries; benefits; and mapped risks/potential impacts. NIST positions MAP as the function that produces "sufficient contextual knowledge about AI system impacts" — i.e., the intake stage. The companion **AI RMF Playbook** supplies suggested actions and documentation templates per subcategory.
+
+### Framework 2 — ISO/IEC 42001 (origin: ISO/IEC, 2023) intake/documentation requirements
+ISO/IEC 42001 is the world's first certifiable **AI Management System (AIMS)** standard, modeled on the Annex SL structure shared with ISO 27001. Relevant to intake: it requires **AI system impact assessments**, documented AI use-case inventories, data governance documentation, and third-party/supplier oversight — meaning the intake form is the first evidence artifact in a certifiable management system. Its lifecycle scope spans "data sourcing, model training, evaluation, deployment, monitoring, and retirement."
+
+### Framework 3 — Responsible AI Institute "AI Use Case Intake Framework" (origin: RAI Institute, non-profit)
+A published, adaptable template providing: systematic **risk-level categorization aligned with EU AI Act** tiers; data-security/privacy evaluation criteria; cross-functional accountability/oversight guidance; and a step-by-step assessment worksheet for technical and business stakeholders.
+
+### Framework 4 — Trustible "perfect intake" four-category model (origin: Trustible, presented at IAPP AI Governance Global with Leidos and Nuix)
+A widely-cited practitioner taxonomy organizing the form into **four categories**:
+- **Use Case Basics** — what the AI will do; who is proposing it; what system/vendor is involved.
+- **Risk Signals** — personal/sensitive/regulated data; consequential decisions about individuals (hiring, lending, healthcare, access); customer-facing vs internal; jurisdiction.
+- **Business Value** — expected outcome; success metrics; estimated investment.
+- **Stakeholder Information** — business owner, technical lead, legal/privacy/compliance contacts.
+Trustible's governing design principle: "every field should map to a question the reviewer actually needs answered," and the goal (per Leidos) is inter-rater reliability — "two reviewers evaluating the same submission reach the same decision."
+
+### Field taxonomy synthesis (the model intake form)
+Consolidating Microsoft/Gartner-style governance templates, the Pertama Partners single-page template, BrianOnAI, and Trustible, a model intake form captures: (1) Problem statement in plain language; (2) Current process & quantified pain points (hours, error rates, complaints); (3) Proposed AI solution / desired capability; (4) In-scope / out-of-scope; (5) Data needed and data sensitivity; (6) Expected value & success metrics; (7) Affected users/processes; (8) Risk/compliance flags (personal data, consequential decisions, jurisdiction); (9) Sponsor/owner, technical lead, legal/privacy contacts; (10) Integration requirements. Design best practices: keep to one page, use conditional logic, respond within ~2 business days, screen within ~5 days, complete evaluation within ~4 weeks — avoid the "excessive bureaucracy" failure mode.
+
+| Framework | Origin | Core structure | Best for |
+|---|---|---|---|
+| NIST AI RMF MAP | NIST (2023) | Context, stakeholders, boundaries, harms | Risk-grounded intake |
+| ISO/IEC 42001 | ISO/IEC (2023) | Impact assessment + inventory documentation | Certifiable management system |
+| RAI Institute Intake | RAI Institute | EU AI Act risk tiers + worksheet | Regulatory alignment |
+| Trustible 4-category | Trustible | Basics / Risk / Value / Stakeholders | Right-sized triage |
+
+## LEAF A2 — Scoping KPIs (candidate quality at intake)
+
+**What the leaf needs:** metrics that define a *strong candidate* before any build — distinct from post-deployment ROI.
+
+The consensus scoring axes at scoping time:
+- **Value potential / sizing** — McKinsey defines a use case as "a targeted application of generative AI to a specific business challenge, resulting in one or more measurable outcomes"; value is sized via impact as a share of functional cost. Per McKinsey's June 2023 *The economic potential of generative AI: The next productivity frontier*, "our analysis of 16 business functions identified just four—customer operations, marketing and sales, software engineering, and research and development—that could account for approximately 75 percent of the total annual value from generative AI use cases" (of $2.6–$4.4 trillion total annual value).
+- **Feasibility / technical complexity** — Gartner's AI Use Case Insights scores each use case on "projected business value and complexity of implementation."
+- **Data readiness** — repeatedly cited as the #1 scaling determinant (Gartner: poor data quality implicated in most failed AI projects).
+- **Risk level** — model risk, regulatory exposure, data sensitivity.
+- **Strategic alignment** — fit with stated objectives.
+- **Time-to-value.**
+
+### Framework — Gartner four-/five-axis scoring threshold model
+Common practice scores each candidate on business value, feasibility, data readiness, and strategic fit, with a minimum threshold to advance to pilot. The Fountain City 5-criteria matrix (score each project 1–5 across five dimensions, total /25) is a representative open implementation. Gartner's "Deep Productivity Matrix" adds two often-missed productivity variables — career experience and function complexity.
+
+### Framework — Gartner "defend / extend / upend" intent categorization
+Gartner's AI project-prioritization funnel categorizes every initiative by strategic intent: **Defend** (boosts individual productivity but rarely yields positive financial ROI), **Extend** (transforms divisions/teams for competitive differentiation — "best bets for near-term financial impact"), **Upend** (transformative). This is itself a scoping-quality lens: it tells you what *kind* of value a candidate represents.
+
+## LEAF A3 — Prioritization Criteria
+
+**What the leaf needs:** models that *rank* a portfolio of candidates.
+
+### RICE (origin: Sean McBride, Intercom)
+Formula: **(Reach × Impact × Confidence) ÷ Effort.** Reach = users/events affected per time period; Impact = per-user magnitude (scored 0.25/0.5/1/2/3); Confidence = % (100/80/50); Effort = person-months. Pros: forces objective trade-offs, separates one fuzzy "impact" estimate into four debatable numbers; cons: false precision, weak on strategic/time-sensitivity factors.
+
+### ICE (origin: popularized by Sean Ellis, growth-hacking)
+Formula: **Impact × Confidence × Ease**, each 1–10. Simpler/faster than RICE; favors easy, high-confidence items (and therefore tends to under-rank high-impact-but-uncertain AI bets — a known bias to correct for).
+
+### Weighted Scoring Model
+Custom criteria (4–6) with weights summing to 100%; each candidate scored per criterion. Fully customizable; best when strategic priorities must be explicitly encoded. Pros: transparent, tailorable; cons: weight-setting is subjective.
+
+### MoSCoW (Must / Should / Could / Won't)
+Categorical prioritization; good for release scoping but "does not rank within categories."
+
+### Value-vs-Feasibility / Impact-vs-Effort 2x2 (Gartner-style)
+Plots candidates on two axes to surface "quick wins" (high value/low effort). Gartner's 2025 retail assessment evaluated 20 non-generative AI use cases on feasibility and business-value axes, "demonstrating that structured scoring eliminates low-signal investments before pilot spend is committed."
+
+### Gartner AI project-prioritization funnel
+Progressive narrowing of 150+ ideas to 3–5, ruthlessly eliminating at each gate, with the defend/extend/upend lens. Per Gartner's June 25, 2025 press release, "Over 40% of agentic AI projects will be canceled by the end of 2027, due to escalating costs, unclear business value or inadequate risk controls" (Anushree Verma, Senior Director Analyst) — underscoring why disciplined prioritization matters; Gartner estimates only ~130 of thousands of agentic-AI vendors are genuine ("agent washing").
+
+### Kano model
+Classifies features by customer-satisfaction type (basic/performance/delighter); relevant when prioritizing user-facing AI features but not a core portfolio-ranking tool.
+
+**AI-specific overlays:** layer data availability, model risk, and regulatory exposure onto any generic model — e.g., add a data-readiness gate and a risk multiplier to RICE/weighted scoring.
+
+| Model | Formula / mechanism | Dimensions | Strength | Weakness |
+|---|---|---|---|---|
+| RICE | (R×I×C)/E | Reach, Impact, Confidence, Effort | Objective, comparable | False precision |
+| ICE | I×C×E | Impact, Confidence, Ease | Fast | Under-ranks uncertain bets |
+| Weighted | Σ(weight×score) | Custom | Encodes strategy | Subjective weights |
+| MoSCoW | Categorical | Must/Should/Could/Won't | Simple scoping | No intra-rank |
+| Value×Feasibility | 2x2 plot | Value, Feasibility | Visual, intuitive | Coarse |
+
+## LEAF A4 — Governance Process (use-case lifecycle)
+
+### Stage-gate / phase-gate model (origin: Robert G. Cooper, Stage-Gate®)
+Moves a use case through idea → scoped → approved → piloted → scaled, with a go/kill decision at each gate. McKinsey's measurement work explicitly maps stages: **Pilot → MVP → Full scale**, with "governance cadence and decision gates" ensuring "projects advance only when signals at one layer credibly support moving to the next."
+
+### NIST AI RMF "GOVERN" function (origin: NIST, 2023)
+The cross-cutting function that "cultivates a risk-management culture, sets policies, assigns accountabilities." It addresses who approves high-risk use cases, how third-party models are introduced, and resource allocation for safety testing. GOVERN persists across all lifecycle stages while MAP/MEASURE/MANAGE are applied per use case.
+
+### ISO/IEC 42001 AIMS governance structure
+Requires top-management leadership and commitment, AI policy and objectives aligned to strategy, defined roles/responsibilities, and continual improvement (Plan-Do-Check-Act). Provides the certifiable governance "operating system."
+
+### Decision-rights frameworks
+- **RACI** (Responsible, Accountable, Consulted, Informed) — *task-centric*; one Accountable per item. Best for execution workstreams.
+- **RAPID®** (origin: Bain & Company; HBR "Who Has the D?", Rogers & Blenko, 2006) — *decision-centric*; Recommend, Agree (explicit veto), Perform, Input, Decide (single decider). Best for high-stakes, multi-stakeholder decisions with real veto holders (e.g., legal/compliance on an AI deployment).
+- **DACI** (Driver, Approver, Contributors, Informed; popularized by Intuit/Atlassian) — decision-centric, four roles, no explicit veto; balances speed and inclusivity.
+
+Applied to AI: use **DACI/RAPID for gate decisions** (approve to pilot, scale/kill) and **RACI for ongoing operational responsibilities**. RAPID's "Agree" maps cleanly to second-line controls (legal, risk, security) on an AI review board.
+
+### AI governance review boards / intake committees
+Composition typically spans engineering, product, legal, privacy, security, data science, and ethics (mirroring Google's three-tier review structure: a responsible-innovation operations team, a senior-expert panel, and a senior-executive council; and Salesforce's Office of Ethical & Humane Use reporting to a Board committee). Cadence and decision rights should be risk-tiered — light-touch for low-risk, full board review for high-risk/novel use cases.
+
+---
+
+# SECTION B — Cost & KPI Measurement
+
+## LEAF B1 — Measurement Parameters
+
+### McKinsey five-layer AI measurement framework (origin: McKinsey QuantumBlack)
+A pyramid linking technical signals up to enterprise value, with governance gates between layers. Layers progress from technical performance and adoption signals → operational improvements → financial benefits/ROI → durable enterprise value. McKinsey's four canonical business-value placements: **lower cost to serve, revenue uplift, margin expansion, and total cost of ownership** (model usage + licensing). Its overarching finding: workflow redesign has "the biggest effect on an organization's ability to see EBIT impact from gen AI." Per McKinsey's *The state of AI* (March 2025, QuantumBlack), only **6%** of organizations qualify as "AI high performers" with ≥5% EBIT impact, only **39%** report enterprise-level EBIT impact, and **78%** use AI in at least one business function (up from 72% in early 2024). The "10-20-70 principle": 70% of effort to people/process/culture, 20% to data/tech, 10% to algorithms.
+
+### SPACE framework (origin: Forsgren, Storey, Maddila, Zimmermann, Houck, Butler — Microsoft Research/GitHub/Univ. Victoria; ACM Queue, 2021)
+Five dimensions of (developer) productivity, explicitly multidimensional because "no single metric can capture productivity": **S**atisfaction & well-being, **P**erformance (outcomes), **A**ctivity (volume of actions), **C**ommunication & collaboration, **E**fficiency & flow. Warns against using Activity (commits, PRs) as a standalone proxy.
+
+### DevEx framework (origin: Noda, Storey, Forsgren et al.)
+Refines SPACE into three core developer-experience drivers: **feedback loops, cognitive load, and flow state**, with cognitive-load reduction identified as the highest-leverage intervention. Complementary to **DORA** delivery metrics.
+
+### Microsoft Work Trend Index + Copilot measurement (origin: Microsoft & LinkedIn)
+The 2024 Work Trend Index Annual Report ("AI at Work Is Here. Now Comes the Hard Part," May 8 2024) surveyed 31,000 workers across 31 markets via Edelman Data & Intelligence. Headline metrics: 75% of knowledge workers use generative AI at work; 78% of AI users are "bringing their own AI" (BYOAI); users report time savings (90%), focus (85%), creativity (84%), enjoyment (83%); 60% of leaders say their company lacks an implementation plan and 59% worry about quantifying productivity gains. Microsoft operationalizes measurement via the **Copilot Dashboard / Copilot Analytics** (in Viva / Copilot Control System) tracking adoption, usage and self-reported time saved. The **Forrester Total Economic Impact (TEI)** study commissioned by Microsoft (2024, composite of 367 decision-makers) projected ~$18.8M productivity benefits — *a vendor-commissioned, composite, partly self-reported projection that should be treated cautiously.*
+
+### GitHub Copilot productivity research (origin: GitHub; Peng, Kalliamvakou, Cihon & Demirer, 2022/2023)
+Per Peng, Kalliamvakou, Cihon & Demirer, *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot* (arXiv:2302.06590, 2023): "the treated group completed the task 55.8% faster (95% confidence interval: 21-89%)" — 71.17 minutes (treated) vs 160.89 minutes (control), p=0.0017, on a JavaScript HTTP-server implementation task. A GitHub survey of 2,000+ developers found 88% felt more productive. *Caveat: the 55.8% figure reflects a single narrow coding task, not real-world production output, and is routinely over-generalized.*
+
+### The "AI value equation" (benefit drivers minus cost drivers)
+Conceptually: **Value = Σ(benefit drivers) − Σ(cost drivers)**, where benefit drivers = time saved (converted to $), throughput/volume gains (margin), error/rework reduction, revenue uplift; and cost drivers = license fees, implementation, compute/usage, change management, and **risk/non-compliance costs**. A representative CFO formulation uses metrics such as time-to-output-reduction (TTOR), error/rework rate, and cost-per-output, net of fully-loaded AI costs, noting well-scoped programs typically reach positive ROI at month 8–12.
+
+### Metric taxonomy for this leaf
+- **Adoption:** activation rate, retention, frequency, depth/breadth of use, license utilization.
+- **Productivity:** time saved, throughput, cycle time, quality/error rate.
+- **Business value / P&L:** cost-to-serve, revenue uplift, margin, TCO.
+- **Leading vs lagging:** adoption/usage are leading; EBIT impact is lagging.
+
+## LEAF B2 — Tracking Process & Ownership
+
+- **Metric ownership / RACI:** assign one Accountable owner per metric; a value/measurement office or **AI Center of Excellence (CoE)** consolidates standards, shares learnings, and accelerates deployment (McKinsey explicitly recommends building CoEs).
+- **Measurement cadence & instrumentation:** McKinsey's pyramid shifts measurement from manual pilot-phase review to telemetry "built directly into the AI tool" at MVP/scale. Combine **system telemetry** (usage logs, license utilization) with **survey instruments** (self-reported time saved, satisfaction — as in SPACE's Satisfaction dimension and the Work Trend Index).
+- **Baselining & counterfactuals:** lock in attribution method *before* the pilot — A/B testing, staggered/phased rollout, or control groups — to isolate AI's effect.
+- **FinOps-style cost tracking:** treat model/usage costs like cloud spend (per-user, per-app, per-model token tracking, quotas, alerting) — directly applicable to per-seat Copilot/ChatGPT/Claude licensing plus consumption.
+- **Dashboards/scorecards:** the Copilot Dashboard is the vendor-native example; a balanced scorecard spanning adoption/productivity/value/risk is the general pattern.
+
+## LEAF B3 — Pilot Scaling Criteria
+
+**The core finding:** most pilots fail to scale for organizational, not technical, reasons. Per BCG's *Where's the Value in AI?* (October 24, 2024; survey of 1,000 CxOs/senior executives across 59 countries), "only 26 per cent of the companies have developed the necessary set of capabilities to move beyond proofs of concept and generate tangible value," and just 4% generate significant value across functions. BCG's **"10-20-70" rule** from the same report frames AI transformation as "10% algorithms, 20% data and technology, and 70% people, processes, and cultural change." Gartner predicts 60% of AI projects abandoned through 2026 absent AI-ready data, and forecast 30% of GenAI projects abandoned after POC by end of 2025. Common root causes: data quality/infrastructure, absent governance, neglected change management, and misaligned (technical-only) metrics.
+
+### Stage-gate scaling criteria (the pilot-to-scale gate)
+Synthesizing McKinsey's pyramid and consultancy guidance, a pilot graduates only when, at the gate:
+- **Adoption** extends beyond early enthusiasts (sustained, not novelty-driven);
+- **Operational improvements** are statistically significant;
+- **Financial benefits** at least offset total cost of ownership;
+- **Technical performance** holds under higher load with monitoring/retraining functioning;
+- **Risk/compliance** requirements are met (risk clearance);
+- **Change-management readiness** exists (process redesign, training, ownership).
+McKinsey: "If ROI is not evident at this stage, it is a signal to refine or stop before full-scale investment."
+
+### "Scale / fix / kill" and proof-of-value (POV) exit criteria
+Two-stage measurement: **technical metrics in the pilot** (accuracy, exception rate, throughput) → **business KPIs in production** (cycle-time, cost-per-transaction, headcount reallocation). Deloitte finds business-aligned-metric organizations achieve payback in under two years vs two-to-four for technically-measured ones. The decision at the gate is explicitly trinary: scale (evidence supports BAU embedding), fix (refine and re-gate), or kill (sunk-cost discipline).
+
+---
+
+# SECTION C — Risk & Appropriate-Use Governance
+
+## LEAF C1 — Public-Facing AI Principles
+
+### Walmart Responsible AI Pledge (origin: Walmart, October 2023) — key reference
+Built on Walmart's core values (service, excellence, integrity, respect), **six commitments**:
+1. **Transparency** — help customers, members, associates understand how data/technology incl. AI is used and the company's goals.
+2. **Security** — advanced security measures to protect data; continuous review to mitigate "current and emerging threats."
+3. **Privacy** — evaluate AI systems so sensitive/confidential information is used in privacy-protecting ways.
+4. **Fairness** — regularly evaluate AI tools for bias affecting customers/members/associates, and mitigate.
+5. **Accountability** — "We will use AI managed by people. We commit to holding ourselves accountable for its impact."
+6. **Customer-centricity** — measure customer satisfaction with AI interactions, listen to feedback, continually review tools for accuracy/relevance.
+Walmart also built its own internal AI governance model/process around the pledge.
+
+### Google AI Principles (origin: Google, 2018; updated Feb 4 2025)
+Original (2018) seven principles included be socially beneficial, avoid unfair bias, be built/tested for safety, be accountable to people, incorporate privacy-by-design, uphold scientific excellence, and be made available for uses that accord with these principles — plus a list of applications Google would *not* pursue (weapons; surveillance violating norms; technologies causing overall harm; uses contravening international law/human rights). The **February 4, 2025 update** restructured around three pillars — **bold innovation, responsible development & deployment, collaborative progress** — and *removed* the explicit prohibitions on weapons and surveillance, drawing significant criticism. Current principles emphasize human oversight, due diligence, safety/security research, mitigating unfair bias, and privacy/IP. Operationalized via a multi-layer governance approach and the **Frontier Safety Framework**.
+
+### Microsoft Responsible AI Standard (origin: Microsoft; six principles + Standard v2, 2022)
+**Six principles:** **Fairness; Reliability & Safety; Privacy & Security; Inclusiveness; Transparency; Accountability.** The **Responsible AI Standard v2** operationalizes them with specific goals, requirements and practices (bias testing, performance thresholds, privacy-by-design, documentation/disclosure, defined owner roles, impact assessments, audit trails). Note these are stated as guiding values, not legally enforceable commitments.
+
+### IBM — Principles for Trust & Transparency + five Pillars of Trust (origin: IBM)
+**Three Principles:** (1) the purpose of AI is to augment — not replace — human intelligence; (2) data and insights belong to their creator; (3) new technology incl. AI must be transparent and explainable. **Five Pillars of Trust:** **Explainability, Fairness, Robustness, Transparency, Privacy.** Operationalized via Ethics-by-Design, the IBM AI Ethics Board, and open-source toolkits (AI Fairness 360, AI Explainability 360, Adversarial Robustness Toolbox).
+
+### Salesforce Trusted AI Principles (origin: Salesforce Office of Ethical & Humane Use, 2018; + 5 generative-AI guidelines 2023; + agentic guidelines)
+**Five trusted-AI principles:** **Responsible, Accountable, Transparent, Empowering, Inclusive.** **Five generative-AI guidelines (2023):** accuracy (convey uncertainty, cite sources); safety (mitigate bias/toxicity, protect PII, prevent data leakage via red-teaming); honesty/data provenance (disclose AI-produced content); empowerment (human-at-the-helm, accessibility, responsible labor); sustainability (high-quality, representative training data). Operationalized via the **Einstein Trust Layer** (zero data retention, toxicity detection, dynamic grounding, audit trails) and an AI Acceptable Use Policy.
+
+### Anthropic & OpenAI published usage/safety principles
+- **Anthropic:** the **Usage Policy (AUP)**, **Claude's Constitution** (encoding "hard constraints"), and the **Responsible Scaling Policy** with **AI Safety Levels (ASL-1…ASL-3+)**. Its agentic framework (Aug 2025) sets five principles (human control, transparency, value alignment, privacy, security).
+- **OpenAI:** **Usage Policies** plus the white paper **"Practices for Governing Agentic AI Systems"** (Dec 2023). Accountability principle: "At least one human entity should be accountable for every uncompensated direct harm caused by an agentic AI system."
+
+### OECD AI Principles (origin: OECD Council Recommendation, adopted 22 May 2019; updated 2024; G20-endorsed; 47 adherents) — first intergovernmental AI standard
+**Five values-based principles:** (1) inclusive growth, sustainable development & well-being; (2) human-centered values & fairness (incl. human rights, rule of law, appropriate safeguards/human intervention); (3) transparency & explainability; (4) robustness, security & safety; (5) accountability. Plus five recommendations to governments (investment, digital ecosystem, enabling policy environment, human capacity, international cooperation). These underpin downstream regulation including the EU AI Act.
+
+### EU AI Act transparency/disclosure obligations (origin: Regulation (EU) 2024/1689; in force 1 Aug 2024)
+Four risk tiers — **prohibited (Art. 5), high-risk (Annex I/III), limited-risk/transparency (Art. 50), minimal.** **Article 50** transparency duties: inform users they are interacting with an AI system (50(1)); mark generative AI output as artificially generated in machine-readable form (50(2)); inform people subject to emotion-recognition/biometric categorization (50(3)); disclose deepfakes and AI-generated public-interest text (50(4)). Information must be given "clearly, distinguishably and accessibly" at first interaction (50(5)). *Applicability dates are in flux: Article 50 was set for 2 August 2026, but a provisional "Digital Omnibus" political agreement (May 7 2026, pending formal adoption) would defer 50(2) synthetic-content marking to 2 December 2026 — flag as provisional.* Penalties for Art. 50 breaches sit in the €15M / 3%-turnover tier; prohibited-practice breaches reach €35M / 7%.
+
+### Cross-cut synthesis — common themes of a model public-facing principle set
+Across Walmart, Google, Microsoft, IBM, Salesforce, OECD and EU obligations, **seven themes recur**: (1) **Fairness / bias mitigation**; (2) **Transparency / disclosure**; (3) **Accountability / human management**; (4) **Privacy / data rights**; (5) **Security**; (6) **Human oversight / augmentation (human-at-the-helm)**; (7) **Reliability / safety**. A model set adds **customer-centricity / beneficial purpose** (Walmart) and **explainability** (IBM) as distinguishing additions.
+
+| Company | # | Named principles |
+|---|---|---|
+| Walmart | 6 | Transparency, Security, Privacy, Fairness, Accountability, Customer-centricity |
+| Google (2025) | 3 pillars | Bold innovation, Responsible development, Collaborative progress |
+| Microsoft | 6 | Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability |
+| IBM | 3 + 5 pillars | Augment/Ownership/Transparency; Explainability, Fairness, Robustness, Transparency, Privacy |
+| Salesforce | 5 | Responsible, Accountable, Transparent, Empowering, Inclusive |
+| OECD | 5 | Inclusive growth, Human-centered/fairness, Transparency, Robustness/safety, Accountability |
+
+## LEAF C2 — Ongoing Education, Agentic AI ("Cowork") & Connectors
+
+### Governing agentic AI (autonomous multi-step work)
+- **NIST AI 600-1 (Generative AI Profile, July 2024)** — cross-sectoral companion to the AI RMF identifying **12 GenAI risk categories** (CBRN information; confabulation; dangerous/violent/hateful content; data privacy; environmental impacts; harmful bias & homogenization; human-AI configuration; information integrity; information security; intellectual property; obscene/degrading content; value-chain & component integration) with 200+ suggested actions organized around governance, content provenance, pre-deployment testing, and incident disclosure. A **proposed NIST AI RMF Agentic Profile** (Cloud Security Alliance Labs) extends RMF for agent autonomy, tool-use risk, runtime governance, and delegation-chain accountability.
+- **OWASP Top 10 for LLM Applications (2025)** — names **LLM06: Excessive Agency** (excessive functionality/permissions/autonomy) with mitigations: least-privilege design, scoped tokens, human-in-the-loop for state-changing actions, capability minimization (read-only where sufficient), action validation. Also relevant: LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM05 Improper Output Handling, LLM10 Unbounded Consumption. The **OWASP Top 10 for Agentic Applications (Dec 2025)** adds ASI03 Identity & Privilege Abuse and the "principle of least agency."
+- **Vendor frameworks** converge on: **human-in-the-loop checkpoints** (Anthropic Claude Code read-only by default; "Plan Mode" reviews the whole execution plan upfront; OpenAI "constraining the action space" and "interruptibility"; Salesforce escalation rules); **action scoping** (Salesforce Topics/Actions/Instructions; Microsoft Copilot Studio "predefined actions, approved connectors, and controlled capabilities rather than arbitrary code execution"); **least-privilege** (Microsoft "no new privileges" — agents respect existing M365 permissions); and **audit trails** (Salesforce generative-AI audit trail in Data 360; Microsoft Purview DSPM for AI). OpenAI's seven practices (Dec 2023): evaluate suitability, constrain action space, set default behaviors, legibility of agent activity, automatic monitoring, attributability, interruptibility/maintaining control. Cloud Security Alliance's **MAESTRO** (Feb 2025) is a seven-layer agentic threat-modeling framework; its **AI Controls Matrix (AICM)** spans 243 controls across 18 domains.
+
+### Governing connectors / plug-ins / third-party integrations
+- **Principle:** least-privilege + permission inheritance. Microsoft 365 Copilot agents respect existing permissions ("no new privileges"); ChatGPT Enterprise connectors/apps are disabled by default for Enterprise with per-user OAuth, RBAC and action control; Claude MCP lets admins set allowed connectors with one-time/permanent grants and an Anthropic-reviewed MCP directory.
+- **Review/approval:** treat each connector as a third-party integration requiring security review; OWASP and OpenAI warn custom/unverified connectors should only be added if the underlying app is trusted ("custom apps are not verified by OpenAI… only add custom apps to your workspace if you know and trust the underlying application"). Cloud Security Alliance flags the **non-human identity governance vacuum** (NHIs outnumber human identities ~90:1) — argue for short-lived tokens, JIT provisioning, and zero-trust for agent/connector identities. The Five Eyes agencies' *Careful Adoption of Agentic AI Services* (May 1, 2026) requires each agent to carry "a verified, cryptographically anchored identity with short-lived credentials."
+- **Allow vs disallow:** allow connectors that inherit user permissions, have scoped OAuth, and are vendor-reviewed; disallow/escalate write-capable, broadly-scoped, or unverified connectors without human approval gates.
+
+### Ongoing user education / continuous enablement
+- McKinsey's value research identifies **role-based capability training** as a top management practice distinguishing high performers, alongside leaders role-modeling use, embedding gen AI into processes, and feedback mechanisms. The general model: continuous enablement (not one-time training), capability-update communication as features evolve, and role-based curricula. Salesforce's AI-literacy program and Trailhead are a vendor exemplar.
+
+## LEAF C3 — Breach Escalation & Resolution
+
+### NIST SP 800-61 (Computer Security Incident Handling Guide) adapted to AI
+- **Rev. 2 (2012)** four-phase lifecycle: **Preparation; Detection & Analysis; Containment, Eradication & Recovery; Post-Incident Activity** (lessons learned). The cycle is non-linear with feedback loops.
+- **Rev. 3 (April 2025)** restructures around **NIST CSF 2.0** functions (Govern, Identify, Protect, Detect, Respond, Recover), aligning incident response with enterprise risk management and emphasizing continuous improvement. For AI misuse/appropriate-use violations, adapt: severity/escalation tiers, triage (true incident vs false positive), defined roles (incident manager, forensic analyst, IT, legal), containment matched to the incident type, remediation workflows, and a formal lessons-learned loop feeding back into preparation.
+
+### NIST AI RMF "MANAGE" function
+Allocates risk-treatment resources to mapped/measured risks; "risk treatment comprises plans to respond to, recover from, and communicate about incidents or events," with "mechanisms for continual improvement" and "processes for assessing emergent risks." This is the AI-native counterpart to incident response.
+
+### AI Incident Database (origin: Responsible AI Collaborative)
+A public repository of AI incidents/harms supporting the detection/learning phases — used to benchmark severity, learn from analogous incidents, and inform preparation.
+
+### Synthesis — an AI incident-response playbook
+Combine SP 800-61r3 structure (CSF 2.0 functions) + AI RMF MANAGE + NIST AI 600-1's **incident disclosure** consideration: (1) **Preparation** — AI AUP, escalation tiers, defined owners, tabletop exercises; (2) **Detection & triage** — telemetry + user reporting, classify by severity (e.g., data leakage vs policy violation vs harmful output); (3) **Containment/eradication/recovery** — scope-match response (e.g., revoke connector, disable agent action), preserve evidence; (4) **Post-incident** — lessons learned, update playbooks/policy, continuous-improvement loop. Severity tiers and clear decision rights (RACI/RAPID) determine who handles which class of AI policy violation.
+
+---
+
+## Recommendations
+
+**Stage 1 — Establish the spine (weeks 0–4).** Adopt **NIST AI RMF** as the umbrella (GOVERN for the operating model; MAP for intake; MEASURE for KPIs; MANAGE for incidents) and align documentation to **ISO/IEC 42001** if certification is a goal. Stand up a risk-tiered intake form using the Trustible four-category structure. *Benchmark to change the plan: if intake completion stalls or review exceeds ~6 weeks, simplify the form.*
+
+**Stage 2 — Install scoring & decision rights (weeks 2–8).** Choose one prioritization model (RICE or weighted scoring) with AI-specific overlays (data-readiness gate, risk multiplier); define gates with **DACI/RAPID** for decisions and **RACI** for ownership. *Threshold: set a minimum candidate score to advance to pilot.*
+
+**Stage 3 — Baseline measurement before piloting (weeks 4–10).** Lock the attribution method (A/B or staggered rollout) and instrument both telemetry and surveys. Build a balanced scorecard (adoption/productivity/value/risk) and FinOps-style usage-cost tracking. Use the **McKinsey five-layer** model and **SPACE/DevEx** for any developer-tool measurement. *Threshold: positive ROI signal typically expected by month 8–12.*
+
+**Stage 4 — Define the scale gate explicitly (weeks 8–12).** Codify scale/fix/kill criteria: adoption beyond enthusiasts, statistically significant operational gains, benefits ≥ TCO, risk clearance, and change-management readiness. *If ROI isn't evident at the gate, refine or kill — do not scale on faith.*
+
+**Stage 5 — Govern principles, agents, connectors, incidents (ongoing).** Publish a public-facing principle set covering the seven common themes (use Walmart's six-commitment structure as a model); govern agentic AI and connectors with least-privilege, human-in-the-loop, and audit trails per OWASP/NIST AI 600-1; and adopt an SP 800-61r3-based AI incident playbook with severity tiers. Maintain continuous, role-based enablement.
+
+## Caveats
+- **Source-type caution:** Forrester TEI and the GitHub "55.8% faster" figure are vendor-commissioned or narrow-task results; treat as projections, not independent proof. Several intake/prioritization specifics come from vendor/consultancy blogs rather than primary standards — corroborated where possible but lower-authority than NIST/ISO/OECD.
+- **Regulatory flux:** EU AI Act applicability dates are changing; the "Digital Omnibus" (provisional, May 2026) may defer Article 50 and high-risk timelines — verify before relying on a specific date.
+- **Google principles changed:** the Feb 2025 update removed prior weapons/surveillance prohibitions; cite the current version deliberately.
+- **Gartner specific document contents** (e.g., the proprietary AI Use Case Prioritization Framework and AI Use Case Insights tooling) sit behind paywalls; this report relies on Gartner's public articles and secondary summaries.
+- **Scope:** all frameworks are presented company-agnostically; the ~500-user Phase 1 pilot context (Claude Enterprise, ChatGPT Enterprise, Microsoft 365 Copilot) is referenced only to illustrate applicability, not to tailor.
