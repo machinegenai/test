@@ -1,0 +1,1258 @@
+You’re right. I got off track. I should not have gone into what you personally own or are accountable for.
+
+Reset:
+
+Your ask is deep research on Fede’s number 5: governance design for business AI use cases.
+And yes — business, not “enterprise.” I’ll stop using “enterprise” as shorthand unless I am quoting a vendor’s product language or a public source that uses that term.
+
+Below is the correct research foundation.
+
+⸻
+
+Research Pack 1: Business AI Governance Foundation for Fede’s Item #5
+
+Fede’s number 5 is asking for three connected governance designs:
+
+1. Strategic use case scoping
+    How business AI ideas get identified, submitted, assessed, prioritized, approved, piloted, measured, and scaled.
+2. Cost and KPI measurement
+    How BJ’s proves whether AI use cases are actually creating value, not just excitement.
+3. Risk and appropriate-use governance
+    How BJ’s enables AI use while protecting members, team members, business data, brand trust, and operational integrity.
+
+The core research finding is this:
+
+Modern AI governance is shifting away from static policy documents and toward operating systems: intake, risk tiering, KPI baselining, human review rules, tool/data access controls, pilot gates, and ongoing monitoring. NIST frames AI risk management around govern, map, measure, and manage; ISO/IEC 42001 frames AI governance as a management system with policies, objectives, processes, risk assessment, and continual improvement; OECD emphasizes trustworthy, human-centered AI that respects rights, fairness, privacy, and democratic values.  
+
+⸻
+
+1. What the external research says
+
+Finding 1: The biggest AI governance failure is not “lack of policy.” It is unmanaged use case sprawl.
+
+Companies are not struggling because no one has heard of responsible AI. They are struggling because AI ideas are appearing everywhere at once: productivity prompts, customer service scripts, merchandising analysis, supply chain forecasting, internal knowledge search, field communications, HR-adjacent use cases, financial analysis, vendor tools, AI agents, and connected apps.
+
+EY’s AI use case management research says a structured AI use case framework improves strategic alignment, value realization, and risk management. EY also emphasizes that clear problem statements, ownership, operational impact, financial feasibility, and continuous monitoring need to be part of use case governance from the beginning, not added after the pilot.  
+
+For BJ’s, that means Fede’s ask should not become only an “AI principles” document. It needs to become a business AI use case operating model.
+
+The minimum viable governance model should answer:
+
+* What counts as an AI use case?
+* Who can submit one?
+* What information is required before review?
+* Which use cases can move quickly?
+* Which require Security, Privacy, Legal, HR, Technology, or AI Council review?
+* What KPIs must be defined before launch?
+* What data can be used?
+* What tool is appropriate?
+* What human review is required?
+* What evidence is needed to scale?
+* What happens if the use case creates risk, inaccurate output, member impact, or data exposure?
+
+⸻
+
+Finding 2: Most companies are using AI, but few are scaling it into measurable business value.
+
+McKinsey’s 2025 State of AI research found that AI use is widespread, but most organizations are still early in scaling and capturing business-level value. It reported that 88% of respondents said their organizations regularly use AI in at least one business function, but only about one-third said their companies had begun scaling AI programs. McKinsey also found that high performers are more likely to redesign workflows, have senior leader commitment, define when human validation is needed, embed AI into business processes, and track KPIs for AI solutions.  
+
+For BJ’s, this matters because Fede’s item 5b — cost and KPI measurement process — is not optional. It is the difference between:
+
+“We gave people AI tools.”
+
+and
+
+“We improved specific business workflows, measured the outcome, controlled the risk, and made scale decisions based on evidence.”
+
+So the governance model should force each AI pilot to define value before it starts.
+
+A weak AI pilot says:
+
+“This will save time.”
+
+A strong AI pilot says:
+
+“This will reduce weekly reporting prep from 4 hours to 90 minutes for 35 users, while maintaining accuracy above 95%, reducing revision cycles by 30%, and requiring human approval before distribution.”
+
+That difference is governance.
+
+⸻
+
+Finding 3: NIST is useful because it turns AI governance into lifecycle work.
+
+NIST’s AI Risk Management Framework is voluntary guidance designed to help organizations manage AI risks to individuals, organizations, and society and incorporate trustworthiness into the design, development, use, and evaluation of AI systems.  
+
+The practical BJ’s translation:
+
+NIST concept	BJ’s business governance translation
+Govern	Establish business AI rules, roles, review bodies, approval gates, escalation paths, and education.
+Map	Understand the use case, users, workflow, data, member/team member impact, business decision affected, and risk context.
+Measure	Define KPIs, baseline performance, test quality, assess risk, track errors, and validate benefits.
+Manage	Approve, mitigate, monitor, scale, pause, remediate, or retire AI use cases.
+
+NIST’s Generative AI Profile adds that generative AI creates specific risks around synthetic content, provenance, information integrity, privacy, security, harmful bias, intellectual property, and human-AI configuration.  
+
+For BJ’s, that means governance must cover more than data leakage. It also needs to cover:
+
+* inaccurate AI-generated content;
+* wrong business recommendations;
+* AI-generated customer/member communications;
+* AI-generated training content;
+* AI-created summaries of internal documents;
+* AI-assisted decisions about people, members, pricing, operations, or vendors;
+* unclear ownership of AI output;
+* use of confidential documents in connected AI tools;
+* generated content being reused without review;
+* hallucinated policy, legal, financial, or operational guidance.
+
+⸻
+
+Finding 4: ISO/IEC 42001 is useful because it treats AI governance as a management system, not a one-time policy.
+
+ISO/IEC 42001 defines an AI management system as interrelated organizational elements used to establish AI-related policies, objectives, and processes. It is meant to help organizations establish, implement, maintain, and continually improve how they manage AI systems. ISO describes the standard as supporting responsible AI, reputation management, AI governance, practical risk management, legal/regulatory alignment, and structured innovation.  
+
+The BJ’s translation:
+
+Fede is not only asking, “What are our AI principles?”
+
+He is asking for the management system around AI use:
+
+* intake;
+* prioritization;
+* approval;
+* business case;
+* pilot design;
+* KPI measurement;
+* risk review;
+* education;
+* escalation;
+* scaling;
+* monitoring;
+* continuous improvement.
+
+So the deliverable should be designed like a business AI management system.
+
+⸻
+
+Finding 5: Walmart is the strongest retail benchmark for the public-facing principles portion.
+
+Walmart’s public digital trust framing is directly relevant because Fede specifically referenced “like Walmart.” Walmart says its digital trust commitments are rooted in service, excellence, integrity, and respect. It describes four focus areas: governance, promoting digital trust, protecting privacy, and cybersecurity. Walmart also states that its AI work is guided by a Responsible AI Pledge centered on six commitments: transparency, security, privacy, fairness, accountability, and customer-centricity.  
+
+A Supermarket News report on Walmart’s Responsible AI Pledge lists the same six commitments and gives more detail: transparency about how data and AI are used; security measures to protect data; privacy evaluation for AI systems; fairness and bias evaluation; human-managed accountability; and customer-centric measurement of AI interactions and feedback.  
+
+The BJ’s lesson is not “copy Walmart.”
+
+The BJ’s lesson is:
+
+A retailer’s public AI principles should be short, trust-centered, member-centered, and connected to visible governance.
+
+For BJ’s, a public-facing AI principles framework should probably be built around:
+
+1. Member trust
+2. Privacy and data protection
+3. Security
+4. Fairness and responsible use
+5. Human oversight
+6. Transparency
+7. Accuracy and usefulness
+8. Accountability and continuous improvement
+
+A BJ’s-style principle should sound less like:
+
+“We operationalize human-centric AI to optimize algorithmic accountability.”
+
+And more like:
+
+“We use AI to help serve our members and team members better, while protecting privacy, keeping people involved in important decisions, and using technology responsibly.”
+
+⸻
+
+2. Important correction on “business,” not “enterprise”
+
+I will treat this as business AI governance.
+
+That means the governance should focus on business use cases, business users, business workflows, business value, and business risk.
+
+It should not assume a huge enterprise AI bureaucracy.
+
+It should be practical enough for:
+
+* merchandising;
+* supply chain;
+* customer service;
+* call center;
+* club support;
+* field communications;
+* HR/L&D-adjacent training;
+* finance/business analysis;
+* technology pipeline evaluation;
+* offshore capability center opportunities;
+* AI Champions;
+* business-led pilots;
+* sanctioned business AI tools;
+* Co-work / Connectors-style connected capabilities.
+
+The important nuance from the tool research is this:
+
+Business-tier AI tools may require more explicit governance because default settings and connected-app behavior can vary by plan.
+
+For example, OpenAI’s documentation says that in ChatGPT Business, workspace admins can control enabled apps and role-scoped app permissions, and OpenAI’s release notes state that connectors are enabled by default for Business workspaces while admins/owners can disable specific connectors. OpenAI also states that, by default, it does not train on inputs or outputs from business users, including ChatGPT Team, ChatGPT Enterprise, and API.  
+
+Microsoft 365 Copilot uses Microsoft Graph to access user data in the user’s context, including emails, chats, and documents the user has permission to access. Microsoft also says Copilot respects identity and permissions, inherits sensitivity labels, applies retention policies, supports audit of interactions, and follows admin settings. Microsoft’s admin guidance also covers governance of agents and connectors through lifecycle, deployment, DLP, and approval controls.  
+
+Anthropic’s Claude connector guidance says connectors let Claude access apps and services, retrieve data, and take actions in connected services, and that Claude inherits each person’s permissions from the connected service. For Google Workspace connectors, Anthropic says Team and Enterprise plan owners must enable connectors before users authenticate, and Claude can only access the Gmail, Calendar, and Drive data for the connected Google account.  
+
+For BJ’s, the business implication is clear:
+
+Connectors and Co-work-style capabilities should be treated as a higher governance category than ordinary prompting because they can retrieve business content, summarize internal information, expose permissioning issues, or take action across connected systems.
+
+That does not mean “block them.” It means govern them differently.
+
+⸻
+
+3. What Fede’s item 5 should become
+
+Fede’s item 5 should become a Business AI Governance Blueprint with three pillars.
+
+⸻
+
+Pillar 1: Strategic use case scoping approach
+
+This directly maps to:
+
+“Strategic use case scoping approach incl. intake forms, KPIs, prioritization criteria and governance process.”
+
+Research-backed design principle
+
+AI use case intake should not start with the tool.
+
+It should start with the business problem.
+
+Bad intake question:
+
+“What do you want to use ChatGPT for?”
+
+Better intake question:
+
+“What business workflow, decision, or pain point are you trying to improve, and what measurable outcome would prove that AI helped?”
+
+Recommended BJ’s intake categories
+
+A serious business AI intake form should capture the following:
+
+1. Business problem
+
+What is the problem, friction, or opportunity?
+
+Examples:
+
+* reporting takes too long;
+* customer service responses are inconsistent;
+* merchandising teams spend too much time summarizing vendor information;
+* supply chain teams need faster exception analysis;
+* field teams cannot quickly find policy guidance;
+* call center knowledge retrieval is slow;
+* team members need training content adapted by role;
+* business teams are duplicating similar analysis across functions.
+
+2. Business area
+
+Classify the use case by business domain:
+
+* merchandising;
+* supply chain;
+* customer service / call center;
+* club operations;
+* finance;
+* HR / L&D;
+* communications;
+* legal/compliance-adjacent;
+* technology;
+* marketing;
+* membership;
+* digital/e-commerce;
+* procurement/vendor management;
+* offshore capability center.
+
+3. Workflow frequency
+
+How often does this workflow happen?
+
+* daily;
+* weekly;
+* monthly;
+* seasonal;
+* event-driven;
+* one-time.
+
+High-frequency workflows often produce stronger AI value than rare tasks.
+
+4. User population
+
+Who will use it?
+
+* individual contributor;
+* manager;
+* executive;
+* call center agent;
+* club leader;
+* analyst;
+* buyer;
+* supply chain planner;
+* HR/L&D partner;
+* corporate team;
+* offshore support team;
+* cross-functional group.
+
+5. Member/customer impact
+
+Will the AI output affect members or customers directly?
+
+Risk increases if AI influences:
+
+* member communications;
+* pricing;
+* promotions;
+* product recommendations;
+* service responses;
+* refunds/returns;
+* membership decisions;
+* complaints/escalations;
+* health/pharmacy-adjacent information;
+* financial/payment-related communication.
+
+6. Team member impact
+
+Will the use case affect employees or employment-related decisions?
+
+Risk increases if AI influences:
+
+* hiring;
+* performance evaluation;
+* scheduling;
+* disciplinary decisions;
+* promotion decisions;
+* compensation;
+* workforce reduction;
+* employee monitoring;
+* training assignment;
+* HR case handling.
+
+The EU AI Act is not necessarily the governing law for BJ’s US operations, but its risk categories are useful as a global benchmark: high-risk AI includes contexts such as employment, education, essential services, critical infrastructure, biometric uses, law enforcement, migration, and justice.  
+
+7. Data involved
+
+Identify whether the use case touches:
+
+* public data;
+* internal non-confidential data;
+* confidential business data;
+* member personal information;
+* team member personal information;
+* vendor/supplier confidential data;
+* financial data;
+* legal material;
+* security information;
+* regulated/sensitive data;
+* unpublished strategy;
+* board/executive materials.
+
+8. AI output type
+
+What will AI generate?
+
+* summary;
+* draft communication;
+* analysis;
+* recommendation;
+* prediction;
+* classification;
+* decision support;
+* image/content;
+* code;
+* knowledge answer;
+* automated action;
+* workflow execution.
+
+Risk rises as output moves from “drafting/summarizing” toward “recommending/deciding/acting.”
+
+9. Human review model
+
+Define the review requirement:
+
+* no formal review needed;
+* user review before use;
+* manager review;
+* subject matter expert review;
+* Legal/Privacy/Security review;
+* business owner approval;
+* AI Council escalation;
+* production monitoring.
+
+10. Tool fit
+
+Determine the appropriate tool class:
+
+* Microsoft 365 Copilot for Microsoft 365-grounded productivity;
+* ChatGPT Business for general reasoning, drafting, analysis, structured thinking, and reusable prompts;
+* Claude business/team use for long-context document work, analysis, writing, and reasoning;
+* Co-work / Connectors when the use case needs connected business content or action;
+* custom technology pipeline when the use case requires system integration, workflow automation, durable application logic, APIs, model evaluation, or production controls;
+* no AI when the risk/value equation does not support it.
+
+11. KPI hypothesis
+
+Every use case should define success before the pilot starts.
+
+Example KPI types:
+
+* time saved;
+* cycle time reduction;
+* error reduction;
+* response quality;
+* first-contact resolution;
+* rework reduction;
+* cost avoidance;
+* adoption;
+* user satisfaction;
+* member satisfaction;
+* quality audit score;
+* compliance incidents avoided;
+* process throughput.
+
+12. Scaling hypothesis
+
+Before piloting, define what scale means.
+
+Scale could mean:
+
+* more users;
+* more locations;
+* more functions;
+* repeated monthly process;
+* formal tool rollout;
+* AI Hub publication;
+* Champion-supported enablement;
+* integration into business process;
+* production technology build.
+
+⸻
+
+Pillar 2: Cost and KPI measurement process
+
+This maps to:
+
+“Cost and KPI measurement process: measurement parameters, tracking process & ownership, pilot scaling criteria.”
+
+Research-backed design principle
+
+AI value should be measured at the workflow level first.
+
+McKinsey’s 2025 AI research found that most organizations are still early in scaling AI and capturing enterprise-level value, while high performers are more likely to redesign workflows, embed AI into business processes, define human validation processes, and track KPIs.  
+
+For BJ’s, that means the KPI system should not begin with “how many people used AI.”
+
+Usage is not value.
+
+A better measurement hierarchy is:
+
+1. Access — Who has the tool?
+2. Activation — Who has tried it?
+3. Adoption — Who uses it repeatedly?
+4. Workflow integration — Where is it embedded into real work?
+5. Outcome improvement — What changed?
+6. Business value — What financial, operational, member, or team member value resulted?
+7. Risk control — Was value achieved without unacceptable risk?
+
+Recommended KPI categories
+
+1. Productivity metrics
+
+Use these when AI helps people complete work faster.
+
+Examples:
+
+* time to draft communication;
+* time to summarize document;
+* time to prepare report;
+* time to analyze feedback;
+* time to build first version of training content;
+* time to generate meeting summary;
+* time to create presentation outline;
+* time to complete research synthesis.
+
+Measurement method:
+
+* baseline time before AI;
+* AI-assisted time;
+* review/editing time;
+* net time saved;
+* number of users;
+* frequency of task;
+* percentage of time saved converted into higher-value work.
+
+Important: do not count gross time saved without subtracting review time.
+
+2. Quality metrics
+
+Use these when AI improves consistency or quality.
+
+Examples:
+
+* quality audit score;
+* manager approval rate;
+* SME correction rate;
+* number of factual errors;
+* number of policy errors;
+* tone/brand compliance score;
+* completeness score;
+* readability score;
+* first-pass acceptance rate.
+
+For generative AI, this is critical because speed without quality can create rework or risk.
+
+3. Cycle-time metrics
+
+Use these when AI reduces process duration.
+
+Examples:
+
+* time from request to first draft;
+* time from intake to decision;
+* time from issue identification to resolution;
+* time from vendor input to summary;
+* time from meeting to action plan;
+* time from incident to triage.
+
+4. Cost metrics
+
+AI cost governance should include:
+
+* licenses/seats;
+* consumption-based usage;
+* add-ons/connectors;
+* implementation time;
+* training time;
+* change management;
+* support/admin overhead;
+* security/privacy review;
+* vendor cost;
+* technology integration;
+* maintenance;
+* monitoring;
+* remediation cost if failures occur.
+
+5. Financial benefit metrics
+
+Examples:
+
+* labor capacity released;
+* avoided contractor spend;
+* reduced rework;
+* reduced overtime;
+* reduced call handle time;
+* improved conversion;
+* improved retention;
+* reduced waste;
+* improved inventory decisions;
+* improved forecast accuracy;
+* reduced stockouts;
+* improved vendor negotiation support;
+* faster campaign execution.
+
+6. Adoption metrics
+
+Examples:
+
+* active users;
+* repeat users;
+* prompt submissions;
+* use case submissions;
+* Champion participation;
+* training completion;
+* office hour attendance;
+* AI Hub visits;
+* template downloads;
+* approved use cases by function;
+* pilots completed;
+* pilots scaled;
+* pilots stopped.
+
+7. Risk metrics
+
+Examples:
+
+* number of high-risk use cases submitted;
+* number escalated to Legal/Privacy/Security;
+* number rejected or redesigned;
+* number of inaccurate outputs found during review;
+* inappropriate-use reports;
+* data exposure events;
+* unauthorized connector usage;
+* member-facing content errors;
+* policy exceptions;
+* unresolved AI risks.
+
+8. Member/customer impact metrics
+
+Examples:
+
+* CSAT;
+* complaint rate;
+* first-contact resolution;
+* average handle time;
+* escalation rate;
+* response consistency;
+* member feedback on AI-assisted interactions;
+* refund/return resolution accuracy;
+* digital self-service completion.
+
+9. Team member experience metrics
+
+Examples:
+
+* confidence using AI;
+* perceived usefulness;
+* training satisfaction;
+* reduction in repetitive work;
+* manager adoption;
+* psychological safety around AI use;
+* clarity of appropriate-use rules;
+* comfort escalating concerns.
+
+⸻
+
+Pillar 3: Risk and appropriate-use governance
+
+This maps to:
+
+“Risk & appropriate use governance: drafting and aligning a public-facing AI governance and principles for member/public use; ongoing education / approach to Co-work and Connectors; process to tackle, escalate and resolve any appropriate use breaches.”
+
+Research-backed design principle
+
+AI risk governance needs to be tiered.
+
+Not every AI use case needs the same review.
+
+A team member using AI to draft a meeting agenda is not the same as a business team using connected AI to summarize member complaints, produce customer service responses, or recommend operational decisions.
+
+The BJ’s model should classify use cases into risk tiers.
+
+⸻
+
+Recommended BJ’s Business AI Risk Tier Model
+
+Tier 0: Personal productivity, low sensitivity
+
+Examples:
+
+* brainstorming;
+* rewriting non-sensitive text;
+* drafting meeting agendas;
+* summarizing public information;
+* creating generic training examples;
+* generating Excel formulas using dummy data;
+* improving grammar.
+
+Governance approach:
+
+* allowed with standard guidance;
+* no special intake required;
+* education through AI Hub and training;
+* no confidential/member/team member data unless approved tool and policy allow.
+
+Tier 1: Internal business productivity with low-to-moderate sensitivity
+
+Examples:
+
+* summarizing internal meeting notes;
+* drafting internal communications;
+* creating project plans;
+* analyzing non-sensitive internal process notes;
+* building training drafts;
+* creating stakeholder updates.
+
+Governance approach:
+
+* allowed in sanctioned business tools;
+* user review required;
+* follow data classification rules;
+* publish reusable guidance/templates;
+* may require manager awareness if used repeatedly in a process.
+
+Tier 2: Business workflow support with measurable operational impact
+
+Examples:
+
+* recurring report generation;
+* supply chain exception summaries;
+* merchandising vendor analysis;
+* call center knowledge article drafting;
+* club operations FAQ generation;
+* communications planning;
+* policy search over approved internal content;
+* AI-assisted training content production.
+
+Governance approach:
+
+* intake required;
+* KPI definition required;
+* business owner review;
+* risk screening;
+* pilot charter;
+* human validation model;
+* scale decision based on evidence.
+
+Tier 3: Sensitive business, member, employee, financial, legal, or connected-data use
+
+Examples:
+
+* member complaint analysis;
+* customer service response suggestions;
+* employee-related content;
+* pricing/promotion recommendations;
+* vendor negotiations;
+* financial forecasts;
+* legal/policy interpretation;
+* AI connected to internal repositories;
+* Co-work / Connectors use;
+* confidential strategy documents;
+* automated workflow actions.
+
+Governance approach:
+
+* formal intake required;
+* Security/Privacy/Legal/Technology review as applicable;
+* data access review;
+* human-in-the-loop required;
+* accuracy testing;
+* approval before pilot;
+* monitoring after pilot.
+
+Tier 4: High-risk or prohibited unless specially approved
+
+Examples:
+
+* AI making employment decisions;
+* AI making member eligibility decisions;
+* AI independently approving refunds/credits/financial outcomes;
+* AI generating legal advice for action without review;
+* AI using sensitive personal data without approval;
+* AI monitoring employee behavior or emotions;
+* AI making safety-critical decisions;
+* AI generating deceptive content;
+* AI impersonating BJ’s leaders or members;
+* AI bypassing access controls;
+* AI using unauthorized external tools with confidential data.
+
+Governance approach:
+
+* default stop;
+* executive/legal/security/privacy review;
+* AI Council decision if strategically important;
+* documented exception process;
+* no scaling without controls.
+
+⸻
+
+4. Co-work and Connectors: why they need special governance
+
+The research is clear that connected AI is a different risk category.
+
+Connected AI can retrieve data, summarize content, cross-reference documents, and sometimes take actions across business applications.
+
+OpenAI’s business documentation states that apps/connectors in ChatGPT Business can be managed by admins, but Business workspaces may have connectors enabled by default unless admins disable them.  
+
+Microsoft says Copilot uses Microsoft Graph to access data the user has permission to access, and Microsoft’s Copilot control guidance includes visibility and lifecycle governance for agents and connectors.  
+
+Anthropic says Claude connectors inherit a user’s permissions from the connected service and can retrieve data or take actions within connected services.  
+
+For BJ’s, the practical governance requirement is:
+
+Any AI capability that connects to business systems should require a pre-launch review of data access, permissions, intended use, output review, logging/monitoring, and user education.
+
+Questions BJ’s should answer before enabling or scaling connected AI:
+
+1. What systems can the AI access?
+2. Does it respect existing permissions?
+3. Are permissions in the source system clean enough?
+4. Can users retrieve confidential content they forgot they had access to?
+5. Can the AI summarize documents across teams or departments?
+6. Can the AI take actions or only retrieve/read?
+7. Are outputs logged?
+8. Are prompts and responses retained?
+9. Who can audit usage?
+10. What user training is required before access?
+11. What data types are prohibited?
+12. What is the escalation path if sensitive content is exposed?
+13. Are connectors enabled by default or only by approval?
+14. Can connectors be limited by role, group, or pilot population?
+15. Does the use case require human review before action?
+
+⸻
+
+5. The public-facing AI principles BJ’s should consider
+
+Based on Walmart’s benchmark and broader responsible AI principles, BJ’s should not publish a long technical AI policy for members. It should publish a short trust statement.
+
+Walmart’s public model is useful because it connects AI to trust, values, governance, privacy, cybersecurity, and customer/member confidence.  
+
+A BJ’s public-facing AI principles draft could be built around this structure:
+
+Draft Principle 1: We use AI to better serve members and team members.
+
+AI should support BJ’s purpose of serving families, improving convenience, strengthening operations, and helping team members work more effectively.
+
+BJ’s public investor materials describe the company as focused on delivering significant value to members and serving the purpose: “We take care of the families who depend on us.”  
+
+Draft Principle 2: We protect privacy and handle data responsibly.
+
+BJ’s should state that AI use must align with privacy commitments and internal data protection requirements. BJ’s public privacy policy says it wants people to understand what information is collected, how it is used, how it is shared, and what safeguards are in place.  
+
+Draft Principle 3: We keep people involved in important decisions.
+
+AI can assist, recommend, summarize, and draft, but people should remain responsible for important decisions affecting members, team members, safety, legal obligations, or financial outcomes.
+
+Draft Principle 4: We use AI transparently where it matters.
+
+Members and team members should not be misled about AI use, especially when AI materially affects an interaction, recommendation, or experience.
+
+Draft Principle 5: We test for accuracy, fairness, and usefulness.
+
+AI should be evaluated for quality, accuracy, bias, relevance, and business fitness before being scaled.
+
+Draft Principle 6: We secure AI-enabled tools and connected data.
+
+AI tools should be governed with appropriate access controls, monitoring, vendor review, and data safeguards.
+
+Draft Principle 7: We continuously improve.
+
+BJ’s should review AI tools and use cases over time, incorporate feedback, address issues, and update governance as technology and business needs evolve.
+
+⸻
+
+6. What the actual governance process should look like
+
+Fede’s item 5 needs a process, not just principles.
+
+The recommended process:
+
+Stage 1: Idea capture
+
+Inputs:
+
+* business leaders;
+* AI Champions;
+* functional teams;
+* Technology pipeline;
+* customer service;
+* supply chain;
+* merchandising;
+* offshore capability center;
+* platform teams;
+* AI Hub submissions;
+* workshops.
+
+Output:
+
+* use case idea logged.
+
+Stage 2: Intake
+
+Required:
+
+* problem statement;
+* business area;
+* users;
+* workflow;
+* data involved;
+* expected output;
+* tool preference;
+* member/team member impact;
+* KPI hypothesis;
+* risk flags;
+* pilot sponsor;
+* scale potential.
+
+Output:
+
+* complete intake form.
+
+Stage 3: Initial screen
+
+Decision:
+
+* duplicate;
+* low-value;
+* already solved;
+* good candidate;
+* needs more detail;
+* high-risk;
+* belongs in technology pipeline;
+* not appropriate for AI.
+
+Output:
+
+* accept, redirect, defer, reject, or escalate.
+
+Stage 4: Risk tiering
+
+Classify Tier 0–4.
+
+Output:
+
+* risk tier;
+* required reviewers;
+* minimum controls;
+* pilot eligibility.
+
+Stage 5: Prioritization
+
+Score use case across:
+
+* business value;
+* strategic alignment;
+* workflow frequency;
+* number of users impacted;
+* member impact;
+* cost impact;
+* feasibility;
+* data readiness;
+* tool readiness;
+* change readiness;
+* measurement clarity;
+* risk level;
+* scalability.
+
+Output:
+
+* portfolio ranking.
+
+Stage 6: Pilot charter
+
+Required:
+
+* scope;
+* users;
+* tool;
+* data boundaries;
+* training;
+* human review;
+* baseline metrics;
+* target metrics;
+* test period;
+* success criteria;
+* stop criteria;
+* issue escalation path.
+
+Output:
+
+* approved pilot.
+
+Stage 7: Pilot execution
+
+Track:
+
+* usage;
+* quality;
+* time saved;
+* errors;
+* review burden;
+* user feedback;
+* business outcome;
+* risk events;
+* support needs.
+
+Output:
+
+* pilot evidence.
+
+Stage 8: Scale decision
+
+Decision options:
+
+* scale;
+* scale with controls;
+* redesign;
+* keep local;
+* pause;
+* stop;
+* send to technology build;
+* escalate to AI Council.
+
+Output:
+
+* decision record.
+
+Stage 9: Ongoing monitoring
+
+Track:
+
+* adoption;
+* KPI performance;
+* risk incidents;
+* user feedback;
+* content updates;
+* tool changes;
+* connector changes;
+* retraining needs;
+* policy updates.
+
+Output:
+
+* governed AI use case portfolio.
+
+⸻
+
+7. Prioritization scoring model
+
+A strong prioritization model should not be only “impact vs effort.”
+
+For business AI, BJ’s should score at least five dimensions:
+
+Dimension 1: Business value
+
+Score 1–5.
+
+Questions:
+
+* Does it reduce cost?
+* Does it improve revenue, margin, or productivity?
+* Does it improve member experience?
+* Does it improve team member experience?
+* Does it reduce cycle time?
+* Does it reduce operational friction?
+
+Dimension 2: Strategic alignment
+
+Score 1–5.
+
+Questions:
+
+* Does it align to current business priorities?
+* Does it support a known leadership objective?
+* Does it connect to supply chain, customer service, merchandising, digital, club operations, or productivity priorities?
+* Does it support a known AI Council focus area?
+
+Dimension 3: Feasibility
+
+Score 1–5.
+
+Questions:
+
+* Can it be done with sanctioned business tools?
+* Is the data accessible and clean enough?
+* Is the workflow understood?
+* Is the business process stable?
+* Are SMEs available?
+* Is there a clear pilot population?
+
+Dimension 4: Measurement clarity
+
+Score 1–5.
+
+Questions:
+
+* Can baseline performance be measured?
+* Is there a clear KPI?
+* Can the result be observed within 30–90 days?
+* Can value be separated from noise?
+* Is there an owner for tracking results?
+
+Dimension 5: Risk
+
+Score 1–5, but inverse weighted.
+
+Questions:
+
+* Does it involve member data?
+* Does it involve team member data?
+* Does it affect customer/member outcomes?
+* Does it involve legal, HR, financial, safety, pricing, or regulated content?
+* Does it use connectors?
+* Could wrong output cause harm?
+* Could it expose confidential data?
+
+A high-value, high-feasibility, low-risk use case should move quickly.
+
+A high-value, high-risk use case should not be killed automatically, but it should require stronger controls.
+
+A low-value, high-risk use case should be rejected or deferred.
+
+⸻
+
+8. Pilot scaling criteria
+
+A pilot should not scale because people liked it.
+
+A pilot should scale only if it meets defined evidence thresholds.
+
+Recommended scale criteria
+
+1. Value threshold met
+
+Example:
+
+* 20%+ cycle-time reduction;
+* 30%+ drafting time reduction;
+* measurable quality improvement;
+* reduced rework;
+* improved response consistency;
+* lower handle time;
+* reduced manual effort;
+* improved employee satisfaction.
+
+2. Quality threshold met
+
+Example:
+
+* outputs pass SME review;
+* factual error rate below threshold;
+* policy accuracy confirmed;
+* tone/brand standards met;
+* no repeated hallucination pattern;
+* human review burden does not erase productivity gain.
+
+3. Risk threshold met
+
+Example:
+
+* no data exposure;
+* no inappropriate-use incident;
+* no member-impacting error;
+* risk controls worked;
+* escalation path tested;
+* sensitive data rules followed.
+
+4. Adoption threshold met
+
+Example:
+
+* target users used it repeatedly;
+* users understood how to use it;
+* training was sufficient;
+* managers supported the workflow;
+* AI Hub materials reduced confusion.
+
+5. Operational readiness met
+
+Example:
+
+* support model exists;
+* content owner exists;
+* tool settings are approved;
+* access model is clear;
+* business owner accepts ongoing monitoring;
+* communications are ready.
+
+⸻
+
+9. Appropriate-use breach process
+
+Fede specifically asks for a process to tackle, escalate, and resolve appropriate-use breaches.
+
+This should be operational.
+
+Severity Level 1: Coaching issue
+
+Examples:
+
+* user shares low-risk poor prompt;
+* AI output reused without enough review;
+* minor citation/accuracy issue;
+* non-sensitive misuse.
+
+Response:
+
+* coach user;
+* point to AI Hub guidance;
+* update FAQ if repeated.
+
+Severity Level 2: Policy issue
+
+Examples:
+
+* confidential information placed in an unapproved tool;
+* AI-generated content sent broadly without review;
+* unapproved connector use;
+* repeated disregard of guidance;
+* AI output used in a business process without required intake.
+
+Response:
+
+* manager/business owner notified;
+* access or use paused if needed;
+* retraining required;
+* documented remediation.
+
+Severity Level 3: Sensitive data or business impact issue
+
+Examples:
+
+* member data exposed;
+* team member data mishandled;
+* incorrect AI output affects member communication;
+* confidential strategy exposed;
+* AI-generated recommendation causes operational issue;
+* vendor/legal/financial content misused.
+
+Response:
+
+* immediate escalation to Security/Privacy/Legal/Technology as appropriate;
+* preserve records;
+* contain exposure;
+* assess impact;
+* notify stakeholders;
+* remediate;
+* update controls/training.
+
+Severity Level 4: Critical incident
+
+Examples:
+
+* large-scale data exposure;
+* member harm;
+* regulatory/legal exposure;
+* security compromise;
+* public reputational risk;
+* unauthorized AI automation action;
+* high-risk prohibited use.
+
+Response:
+
+* incident response process;
+* executive escalation;
+* formal investigation;
+* communications plan;
+* remediation;
+* post-incident review;
+* governance change.
+
+⸻
+
+10. The research-backed recommendation for Fede’s number 5
+
+Fede’s item 5 should become the following deliverable:
+
+“Business AI Governance Blueprint”
+
+With these sections:
+
+1. Business AI governance objectives
+2. Use case intake model
+3. Use case prioritization rubric
+4. Risk tiering model
+5. Tool-fit decision tree
+6. KPI and cost measurement framework
+7. Pilot charter and scaling criteria
+8. Co-work / Connectors governance
+9. Public-facing AI principles draft
+10. Appropriate-use education model
+11. Breach / misuse escalation process
+12. AI Council decision points
+
+The highest-value research conclusion is this:
+
+BJ’s should govern AI by use case risk and business value, not by generic enthusiasm for AI tools. Low-risk productivity should move fast. Connected, member-facing, team-member-impacting, legal, financial, HR, pricing, or operationally sensitive use cases should move through intake, review, KPI baselining, pilot controls, and scale gates.
+
+That is the core of the answer Fede is asking for.
