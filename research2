@@ -1,0 +1,501 @@
+# External Frameworks for Enterprise AI Governance
+## SECTION A — Strategic AI Use-Case Scoping
+### (Pass 1 of 3 — company-agnostic external research)
+
+> **How to read this document.** This is the first of three deep-dive passes (A = scoping, B = measurement, C = risk/appropriate-use). Every named framework below is given the same eight-part treatment: **(1) Origin** — who/when/which publication; **(2) Mechanism** — how it actually works, step by step; **(3) Exact scales/inputs/formula** — the precise numbers, not a summary; **(4) Primary-source anchor** — verbatim clause/subcategory text where it matters; **(5) Worked example** — applied to a realistic enterprise AI use case; **(6) AI-specific adaptation** — how it changes for generative-AI work; **(7) Limitations & failure modes**; **(8) Selection guidance** — when to pick it over rivals. Nothing here is tailored to any specific company; adaptation is a later step.
+>
+> Section A covers four leaves: **A1 Intake Forms · A2 Scoping KPIs · A3 Prioritization Criteria · A4 Lifecycle Governance Process.**
+
+---
+
+# LEAF A1 — INTAKE FORMS
+
+**What this leaf must accomplish.** An AI use-case intake form is the *front door control*. It does four jobs simultaneously: (a) it forces a proposer to articulate the problem before a solution; (b) it captures exactly the information a reviewer needs to triage, with nothing extraneous; (c) it generates the first audit artifact in the governance record; and (d) it routes the request to the right risk tier. The frameworks below supply the field taxonomy and the process mechanics.
+
+---
+
+## A1·Framework 1 — NIST AI RMF "MAP" Function (the scoping backbone)
+
+**(1) Origin.** NIST AI Risk Management Framework 1.0 (NIST AI 100-1), published January 26, 2023, by the U.S. National Institute of Standards and Technology under the National AI Initiative Act of 2020. The companion **AI RMF Playbook** (first complete version March 30, 2023, maintained as a living web resource at airc.nist.gov) supplies subcategory-level suggested actions, documentation prompts, and references. The framework is voluntary, rights-preserving, non-sector-specific, and use-case-agnostic.
+
+**(2) Mechanism.** The AI RMF Core has four functions — **GOVERN, MAP, MEASURE, MANAGE**. MAP is explicitly the *context-and-scoping* function. NIST's own description: MAP "establishes the context to frame risks related to an AI system," and the stated end-state is decisive for intake design — *"After completing the map function, Framework users should have sufficient contextual knowledge about AI system impacts to inform an initial go/no-go decision about whether to design, develop, or deploy an AI system."* That sentence is the entire justification for a structured intake form: the form **is** the data-capture instrument for MAP, and a completed form **is** the evidence supporting the go/no-go gate. MAP has 5 categories and 18 subcategories; the intake-relevant ones map almost one-to-one onto form fields.
+
+**(3) Exact subcategories → intake fields.** The mapping (subcategory text is verbatim from NIST AI 100-1, Table 2):
+
+| MAP subcategory (verbatim) | Intake field it generates |
+|---|---|
+| **Map 1.1** — "Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented." | Problem statement; intended purpose; deployment context; applicable laws/norms |
+| **Map 1.3** — "The organization's mission and relevant goals for AI technology are understood and documented." | Strategic-alignment field (which objective this serves) |
+| **Map 1.4** — "The business value or context of business use has been clearly defined or — in the case of assessing existing AI systems — re-evaluated." | Expected value / business case |
+| **Map 1.5** — "Organizational risk tolerances are determined and documented." | Risk-tier flag against stated tolerance |
+| **Map 1.6** — "System requirements (e.g., 'the system shall respect the privacy of its users') are elicited from and understood by relevant AI actors." | Requirements & constraints; data-privacy requirement |
+| **Map 2.1** — "The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders)." | Proposed AI solution / capability type |
+| **Map 2.2** — "Information about the AI system's knowledge limits and how system output may be utilized and overseen by humans is documented." | Human-oversight model; where a human stays in the loop |
+| **Map 2.3** — "Scientific integrity and TEVV considerations are identified and documented, including those related to … data collection and selection (e.g., availability, representativeness, suitability)." | Data needed; data availability/representativeness (the data-readiness field) |
+| **Map 3.1** — "Potential benefits of intended AI system functionality and performance are examined and documented." | Expected benefits / success metrics |
+| **Map 5.1** (impact assessment) | Affected individuals/communities; impact flags |
+
+**(4) Primary-source anchor.** Beyond the table above, the Playbook's GOVERN guidance instructs organizations to *"Establish impact assessment policies and processes for AI systems used by the organization"* and to be able to answer documentation prompts such as *"How has the entity documented the AI system's data provenance, including sources, origins, transformations, augmentations, labels, dependencies, constraints, and metadata?"* — a direct specification of intake data-lineage fields.
+
+**(5) Worked example.** Intake for *"GenAI assistant that drafts vendor-negotiation letters for the merchandising team."* MAP 1.1 → purpose: reduce drafting time; context: internal, B2B vendor comms. MAP 2.1 → method: generative LLM with retrieval over prior letters. MAP 2.2 → oversight: buyer reviews and signs every letter (human-in-the-loop, no autosend). MAP 2.3 → data: historical letters (available, representative) but contains pricing terms (sensitive). MAP 1.4 → value: ~6 buyer-hours/week. The completed MAP record is exactly the intake form, and it surfaces the one real risk (pricing-term leakage) at the front door.
+
+**(6) AI-specific adaptation.** MAP is *already* AI-specific — it was written for AI systems. For generative AI specifically, pair it with the **NIST Generative AI Profile (NIST AI 600-1, July 2024)**, which adds 12 GenAI risk categories (e.g., confabulation, data privacy, information integrity, IP, information security) that become additional risk-flag fields on the intake form.
+
+**(7) Limitations & failure modes.** MAP is a *framework of outcomes*, not a form — it tells you what to know, not how to ask it; you must author the actual fields. It is also exhaustive: applying all 18 subcategories to a low-risk productivity use case is overkill and breeds intake fatigue. NIST explicitly says the actions "do not constitute a checklist." Mitigation: risk-tier the form so low-risk requests answer a short subset.
+
+**(8) Selection guidance.** Use MAP as the *authoritative source of what to capture* when you need a defensible, audit-ready, regulator-recognized basis for your fields — especially if you may later pursue ISO 42001 certification or face the EU AI Act/Colorado AI Act. It is the spine; the templates below (Trustible, RAI Institute) are faster to operationalize but should be checked back against MAP for completeness.
+
+---
+
+## A1·Framework 2 — ISO/IEC 42001:2023 AI System Impact Assessment & Documentation
+
+**(1) Origin.** ISO/IEC 42001:2023, published December 2023 — the world's first certifiable **AI Management System (AIMS)** standard, jointly by ISO and IEC. Certifiable by accredited third-party bodies (unlike NIST AI RMF, which has no certification).
+
+**(2) Mechanism.** ISO 42001 uses the Harmonized Structure shared with ISO 27001/9001: **mandatory Clauses 4–10** (Context, Leadership, Planning, Support, Operation, Performance Evaluation, Improvement) plus **Annex A** (a reference control set) and **Annex B** (implementation guidance). For intake specifically, two things matter: (a) Clause 6.1 requires AI **risk assessment**, and (b) **Annex A control objective A.5** requires an **AI system impact assessment** for systems that affect people. The standard also uniquely requires, as part of scoping the AIMS, that the organization **formally determine its role** (developer, provider, user) toward each in-scope AI system — a field that changes what else you must capture.
+
+**(3) Exact structure.** Annex A contains **38 controls across 9 control objectives (A.2–A.10)**: AI policy; internal organization; resources; **impact assessment (A.5)**; AI system life cycle; data; information for interested parties; responsible use; third-party relationships. Two impact-assessment controls drive intake:
+- **A.5.1 (Impact assessment scope)** — conduct an impact assessment for every AI system that affects people (employees, customers, third parties), considering physical, psychological, financial, and discriminatory harms.
+- **A.5.2 (Proportionate controls)** — controls implemented must be proportionate to identified impacts; a low-impact, no-sensitive-data system does not need the control intensity of a hiring/credit system.
+
+**(4) Primary-source anchor.** AWS's ISO 42001 guidance notes AI impact assessments (AIIAs) *"are like data protection impact assessments (DPIAs) for high-risk personal data processing"* and recommends they be conducted *"at least annually on existing systems, and prior to the deployment of any new AI function."* That cadence ("prior to deployment of any new function") is an argument for impact-assessment questions living *on the intake form itself*.
+
+**(5) Worked example.** The same vendor-letter assistant: under A.5.1 the impact assessment asks who is affected (buyers, vendors), what harms could arise (a hallucinated commitment in a letter → financial/contractual harm), and under A.5.2 sets proportionate controls (mandatory human sign-off, no autosend) — recorded at intake and carried into the Statement of Applicability.
+
+**(6) AI-specific adaptation.** ISO 42001 is purpose-built for AI; its companion **ISO/IEC 42005** (AI system impact assessment) gives the detailed methodology, and **ISO/IEC 23894** gives AI risk-management guidance. Use 42005 to design the impact-assessment section of the intake form.
+
+**(7) Limitations & failure modes.** The controls are "deliberately high-level and principle-based, not prescriptive technical requirements" — they tell you to do an impact assessment but not the exact questions. Certification is effortful; for a Phase-1 internal pilot, adopting the *impact-assessment discipline* without full certification is the pragmatic move.
+
+**(8) Selection guidance.** Choose ISO 42001's impact-assessment structure when certification is a goal, when procurement/customers expect it, or when you want a management-system wrapper (policy → risk → controls → audit) rather than just a framework. It pairs naturally with NIST MAP: MAP frames context, A.5 formalizes the impact assessment, and both feed the same intake form.
+
+---
+
+## A1·Framework 3 — Responsible AI Institute "AI Use Case Intake Framework"
+
+**(1) Origin.** Responsible AI Institute (RAI Institute), a non-profit; a published, adaptable intake template designed for cross-functional use.
+
+**(2) Mechanism.** Provides a step-by-step assessment worksheet that walks a proposer and reviewer through use-case description, then risk categorization, then data/privacy evaluation, then accountability assignment. Its distinguishing move is **risk-level categorization explicitly aligned to EU AI Act tiers** (unacceptable / high / limited / minimal), so the intake output is regulator-legible from day one.
+
+**(3) Exact inputs.** Use-case description; intended users and affected parties; EU-AI-Act-aligned risk tier; data sensitivity/privacy evaluation; cross-functional accountability/oversight assignment.
+
+**(5) Worked example.** A customer-facing chatbot routed through this framework lands in the EU AI Act "limited risk / transparency" tier (must disclose it is AI), triggering a transparency-control field; an internal summarizer lands in "minimal," triggering a lighter path.
+
+**(6) AI-specific adaptation.** It is AI-native and regulation-forward; its value is mapping a raw idea onto a legal risk tier at intake.
+
+**(7) Limitations.** As a non-profit template it is less granular than a consultancy's bespoke form; treat as a strong starting scaffold.
+
+**(8) Selection guidance.** Best when EU AI Act (or analogous) exposure is real and you want the intake form to pre-classify legal risk.
+
+---
+
+## A1·Framework 4 — Trustible Four-Category Intake Model
+
+**(1) Origin.** Trustible (AI governance vendor); a practitioner taxonomy widely circulated via IAPP AI Governance Global presentations (with Leidos and Nuix). It is the most usable distillation of "what belongs on the form."
+
+**(2) Mechanism.** Organizes every field into **four buckets**, governed by one design rule: *every field must map to a question the reviewer actually needs answered*, with the explicit goal of **inter-rater reliability** — "two reviewers evaluating the same submission reach the same decision."
+
+**(3) Exact categories & fields.**
+- **Use-Case Basics** — what the AI will do; who is proposing it; which system/vendor is involved.
+- **Risk Signals** — personal/sensitive/regulated data involved? consequential decisions about individuals (hiring, lending, healthcare, access)? customer-facing vs internal? jurisdiction(s)?
+- **Business Value** — expected outcome; success metrics; estimated investment.
+- **Stakeholder Information** — business owner; technical lead; legal/privacy/compliance contacts.
+
+**(5) Worked example.** Vendor-letter assistant: Basics (drafts letters; merchandising proposes; Claude Enterprise). Risk Signals (pricing data = sensitive; no decisions about individuals; internal; US). Value (6 hrs/week; success = adoption + time saved). Stakeholders (buyer lead = owner; IT = technical; Legal = pricing-confidentiality contact).
+
+**(6) AI-specific adaptation.** The "Risk Signals" bucket is where you bolt on GenAI-specific flags (hallucination tolerance, training-data provenance, connector/data-access scope).
+
+**(7) Limitations.** Vendor-originated (secondary to NIST/ISO); deliberately lightweight, so high-risk systems still need a deeper impact assessment appended.
+
+**(8) Selection guidance.** Use Trustible's four buckets as the *layout* of your form and NIST MAP/ISO A.5 as the *completeness check* on the fields inside them. This is the recommended default operating combination: Trustible structure, MAP/ISO rigor.
+
+---
+
+## A1·Synthesis — The Model AI Use-Case Intake Form (best-practice artifact)
+
+Consolidating NIST MAP, ISO 42001 A.5, RAI Institute, Trustible, and published Microsoft/Google Cloud/AWS governance templates, a complete best-practice intake form contains the following fields. *For each: the field, why it is captured, and the decision it informs.*
+
+**Section 1 — Use-Case Basics**
+- **Title / one-line description** — indexing; portfolio view.
+- **Proposer & department** — routing; ownership.
+- **Tool/vendor proposed** (e.g., Claude Enterprise, Copilot) — security review path.
+- **Problem statement (plain language)** — forces problem-before-solution; the reviewer's anchor.
+- **Current process & quantified pain** (hours, error rate, complaint volume, cost) — baseline for later ROI; *do not skip — without it there is no denominator for value*.
+
+**Section 2 — Proposed Solution & Scope**
+- **Proposed AI capability / method** (drafting, summarizing, classification, retrieval, agentic multi-step) — maps to NIST Map 2.1; sets risk profile.
+- **In-scope / out-of-scope** — prevents scope creep; clarifies the pilot boundary.
+- **Integration & technical requirements** (connectors, data sources, systems touched) — security-review trigger.
+
+**Section 3 — Data Needs & Sensitivity**
+- **Data required** — feasibility input.
+- **Data classification** (public / internal / confidential / restricted) — the single most important risk field; gates whether the use case is even permissible.
+- **Data provenance/lineage** (NIST prompt) — IP and compliance.
+- **Data availability & representativeness** (NIST Map 2.3) — data-readiness, the #1 scaling determinant.
+
+**Section 4 — Value & Success Metrics**
+- **Expected value** (hours saved, revenue/margin, error reduction) — prioritization input; maps to Map 1.4.
+- **Success metrics / KPIs** — defines what "working" means; pre-commits the measurement.
+- **Estimated investment / effort** — the denominator in RICE-style scoring.
+
+**Section 5 — Risk & Compliance Flags**
+- **Consequential decisions about individuals?** (hiring, lending, access, health) — escalates risk tier.
+- **Customer-/member-facing?** — triggers transparency/disclosure obligations.
+- **Regulatory tier** (EU AI Act-aligned: prohibited / high / limited / minimal) — legal path.
+- **Personal/sensitive/regulated data?** — privacy review trigger.
+- **GenAI-specific flags** — hallucination tolerance; autonomy/agentic scope; connector data-access breadth.
+
+**Section 6 — Stakeholders & Oversight**
+- **Business sponsor/owner** (single accountable) — decision rights.
+- **Technical lead** — feasibility owner.
+- **Legal / privacy / security contacts** — second-line reviewers.
+- **Human-oversight model** (Map 2.2: where a human reviews/approves output) — the core appropriate-use control.
+
+### A1·Process Mechanics (how the form behaves)
+- **Conditional/branching logic** — low-risk requests (internal, no sensitive data, no decisions about people) answer a short path; high-risk requests unfold the full impact assessment. This resolves the rigor-vs-bureaucracy tension.
+- **Triage SLAs** — acknowledge within ~2 business days; initial screen within ~5 business days; full evaluation within ~4 weeks. The published failure mode is "excessive bureaucracy" that drives shadow AI; speed is itself a control.
+- **Routing & decision rights** — light-touch reviewer for low risk; full review board for high/novel risk (see A4).
+- **Inter-rater reliability** — the Trustible/Leidos test: two reviewers, same submission, same decision. Achieved via defined rubrics for each scored field (see A2/A3).
+- **Audit trail** — record which actions/criteria were applied and *why others were not*; NIST notes "the audit trail is itself a control."
+
+| A1 framework | Origin | Core structure | Best for |
+|---|---|---|---|
+| NIST AI RMF MAP | NIST (2023) | 18 subcategories of context/risk | Defensible field completeness |
+| ISO/IEC 42001 A.5 | ISO/IEC (2023) | Impact assessment + proportionate control | Certification / management system |
+| RAI Institute Intake | RAI Institute | EU-AI-Act risk tiering + worksheet | Regulatory pre-classification |
+| Trustible 4-category | Trustible | Basics / Risk / Value / Stakeholders | Usable form layout, triage speed |
+
+---
+
+# LEAF A2 — KPIs FOR SCOPING (candidate quality at intake)
+
+**What this leaf must accomplish.** These are *not* post-deployment ROI metrics (those are Section B). A2 answers: *at intake, before we build anything, what makes this a strong candidate worth advancing?* It scores the **quality of the candidate**, producing a number (or tier) that feeds the prioritization in A3 and the gate in A4. Six dimensions recur across Gartner, McKinsey, and BCG practice; each has a concrete scoring approach.
+
+---
+
+## A2·The Six Scoping-Quality Dimensions (with scoring approaches)
+
+**1. Value potential / sizing.** *How to estimate value before building.* The dominant method is **value as a share of functional cost**: estimate the addressable cost or revenue pool of the function, then the fraction the use case can move. McKinsey's anchoring definition: a use case is *"a targeted application of generative AI to a specific business challenge, resulting in one or more measurable outcomes."* McKinsey's sizing lens (from *The economic potential of generative AI*, June 2023): of 16 business functions analyzed, *"just four — customer operations, marketing and sales, software engineering, and research and development — … could account for approximately 75 percent of the total annual value"* (of a $2.6–$4.4 trillion total). *Scoring:* convert to expected hours saved × loaded labor rate, or revenue/margin delta; bucket into T-shirt sizes (S/M/L/XL) or a 1–5 value score with defined dollar bands.
+
+**2. Feasibility / technical complexity.** Gartner scores use cases on **business value vs. complexity of implementation**. *Scoring:* a 1–5 complexity score factoring model maturity, integration depth, and build effort. Higher complexity lowers candidate quality at equal value.
+
+**3. Data readiness / availability.** Repeatedly cited as the #1 determinant of whether AI projects scale (Gartner attributes most failed AI projects in part to poor data quality; predicts ≥60% of AI projects abandoned through 2026 absent AI-ready data). *Scoring:* a data-readiness sub-score (is the data available, accessible, representative, sufficiently clean, and permissioned?) on a 1–5 maturity scale; treat a low score as a **gate**, not just a deduction.
+
+**4. Risk level.** Composite of model risk, regulatory exposure, and data sensitivity. *Scoring:* map to the EU-AI-Act-aligned tier from intake; convert to a 1–5 risk score where higher risk demands higher value to justify.
+
+**5. Strategic alignment.** Fit with stated objectives (NIST Map 1.3). *Scoring:* 1–5 alignment to a named strategic priority; unaligned "orphan" use cases score low regardless of value.
+
+**6. Time-to-value.** How fast the candidate can show a result. *Scoring:* weeks-to-first-value bucketed; faster = higher quality in a Phase-1 context where building momentum matters.
+
+---
+
+## A2·Framework — Gartner "Defend / Extend / Upend" Intent Categorization
+
+**(1) Origin.** Gartner AI strategy guidance; a categorization that classifies every candidate by *strategic intent* rather than raw score — a quality lens that tells you what *kind* of value you're buying.
+
+**(2) Mechanism & (3) the three categories.**
+- **Defend** — improves individual/team productivity but *rarely yields positive financial ROI on its own*. These are table-stakes efficiency plays (most generic "save time" copilot use cases live here).
+- **Extend** — transforms a division/team for competitive differentiation; Gartner frames these as the *"best bets for near-term financial impact."*
+- **Upend** — genuinely transformative, business-model-altering bets (highest risk/reward).
+
+**(5) Worked example.** "Summarize meeting notes for everyone" = Defend (productivity, hard to bank as P&L). "AI-assisted promotion-and-markdown optimization in merchandising" = Extend (differentiating, bankable margin). "AI-native new membership offering" = Upend.
+
+**(6) AI-specific adaptation.** Directly built for AI portfolios; use it to ensure a Phase-1 slate isn't *all* Defend (which feels productive but won't show EBIT) — deliberately seed a few Extend candidates.
+
+**(7) Limitations.** Categorical, not quantitative — pair with a scoring model. The Defend/Extend boundary can be contested.
+
+**(8) Selection guidance.** Use early in scoping to balance the portfolio by value *type*, before RICE-style ranking by value *magnitude*.
+
+---
+
+## A2·Setting Minimum Thresholds (cut scores)
+
+A candidate should **advance to pilot only if it clears minimums on multiple dimensions** — not just a high blended average. A representative open implementation (Fountain City–style): score each candidate 1–5 across five dimensions for a total /25, with a cut score (e.g., ≥15) *and* a hard data-readiness floor (e.g., data score ≥3) and a risk ceiling (e.g., no "prohibited"/unmitigated-high risk). The multi-gate logic prevents a high-value/zero-data-readiness candidate from passing on value alone.
+
+---
+
+# LEAF A3 — PRIORITIZATION CRITERIA
+
+**What this leaf must accomplish.** A2 scores candidate *quality*; A3 *ranks the portfolio* so finite pilot capacity goes to the right few. Below, each model gets the full eight-part treatment, followed by a comparison table and the AI-specific overlays.
+
+---
+
+## A3·Framework 1 — RICE
+
+**(1) Origin.** Created by **Sean McBride at Intercom (2018)**, published on the Intercom blog ("RICE: Simple prioritization for product managers"). Built on Intercom's growth team to compare many ideas against a *single* conversion goal — which is why it works cleanest when candidates share a common objective.
+
+**(2) Mechanism.** Split the un-arguable word "impact" into four estimable factors, score each, and combine into one comparable number. Reach, Impact, and Confidence are benefits (numerator); Effort is cost (denominator).
+
+**(3) Exact scales & formula (verbatim from Intercom).**
+- **Reach** — how many people/events the initiative affects *in a defined time period* (e.g., users per quarter). Use real analytics, not guesses.
+- **Impact** — per-person magnitude on the goal, on a fixed multiple-choice scale: **3 = massive, 2 = high, 1 = medium, 0.5 = low, 0.25 = minimal.** (The fixed scale exists to "temper enthusiasm for exciting but ill-defined ideas.")
+- **Confidence** — a percentage reflecting evidence quality: **100% = high (quantitative data), 80% = medium (some data), 50% = low (gut feeling).** Below 50% = "moonshot," deprioritize.
+- **Effort** — total team time in **person-months** across product/design/engineering; kept to whole numbers (or 0.5) to avoid false precision.
+- **Formula:** **RICE = (Reach × Impact × Confidence) ÷ Effort.** The result is "total impact per unit of work"; scores are *relative* (a 100 means nothing alone; 100 vs 30 means everything).
+
+**(5) Worked example (AI portfolio).** Candidate: "GenAI onboarding-doc summarizer." Reach = 2,000 employees/quarter hitting onboarding; Impact = 2 (high — measurably faster ramp); Confidence = 80% (some pilot data); Effort = 2 person-months. RICE = (2000 × 2 × 0.8) ÷ 2 = **1,600.** Compare to "AI dark-mode for the portal": Reach 5,000, Impact 0.25, Confidence 100%, Effort 1 → (5000 × 0.25 × 1)/1 = **1,250.** RICE correctly prevents a high-reach "nice-to-have" from outranking a real productivity driver.
+
+**(6) AI-specific adaptation.** (a) Tie **Impact** to an AI-relevant outcome (activation, time-saved, error reduction) and define the bands explicitly. (b) **Confidence** is the honest home for AI uncertainty — model reliability, hallucination risk, and unproven workflows all *lower* confidence rather than being ignored. (c) Add a **data-readiness multiplier** (below). (d) Effort must include prompt engineering, evaluation, and change management, not just build.
+
+**(7) Limitations & failure modes.** False precision (multiplying four estimates implies rigor that isn't there). The well-documented gaming pattern: teams inflate Confidence to 80% for pet projects and sandbag it to 50% for rivals — the "Score Integrity Test" catches this. RICE under-weights strategic and time-sensitivity factors and assumes a shared goal (mixed-goal portfolios distort it). NIST-style risk isn't represented unless added.
+
+**(8) Selection guidance.** Choose RICE when you have a portfolio of comparable candidates against a shared objective and want a *ranked list* with explicit uncertainty handling. Prefer it over ICE when Reach varies a lot across candidates (ICE has no Reach term).
+
+---
+
+## A3·Framework 2 — ICE
+
+**(1) Origin.** Popularized by **Sean Ellis** in growth-hacking practice (predates and inspired RICE).
+
+**(2) Mechanism.** Three factors, scored and multiplied — faster and lighter than RICE.
+
+**(3) Exact scale & formula.** **Impact, Confidence, Ease**, each scored **1–10**; **ICE = Impact × Confidence × Ease.** (Some variants score 1–5.)
+
+**(5) Worked example.** "Pricing-page AI copy test": Impact 7, Confidence 6, Ease 9 → ICE = 378. Quick to compute in a whiteboard session.
+
+**(6) AI-specific adaptation.** "Ease" naturally captures technical/data simplicity; but because Ease is weighted equally with Impact, ICE *systematically biases toward easy, high-confidence wins* — which in an AI context means it over-ranks shallow copilot tweaks and under-ranks high-value-but-uncertain Extend bets. Counteract by adding a value floor.
+
+**(7) Limitations.** No Reach term (so a tiny-audience easy win can top the list); the easy-win bias above; 1–10 scales are subjective without rubrics.
+
+**(8) Selection guidance.** Use ICE for fast, low-stakes triage or when candidates have similar reach. Graduate to RICE when reach varies or when you need to defend rankings to executives.
+
+---
+
+## A3·Framework 3 — Weighted Scoring Model
+
+**(1) Origin.** Generic multi-criteria decision analysis; standard in product and portfolio management.
+
+**(2) Mechanism.** Choose 4–6 decision criteria, assign each a weight, score every candidate per criterion, and compute a weighted total. Fully customizable — its strength is that it *encodes your specific strategy* into the weights.
+
+**(3) Exact mechanics.** Weights **sum to 100%**; each candidate scored (e.g., 1–5 or 1–10) per criterion; **score = Σ(weight × criterion score).** Example criteria for AI: strategic alignment (25%), value potential (25%), feasibility (15%), data readiness (15%), risk-inverse (10%), reusability (10%).
+
+**(5) Worked example.** Candidate scored 4/5 alignment, 5/5 value, 3/5 feasibility, 2/5 data, 4/5 risk-inverse, 3/5 reuse with the weights above → (0.25·4 + 0.25·5 + 0.15·3 + 0.15·2 + 0.10·4 + 0.10·3) = 3.7/5. The low data score (2) visibly drags the total, which is the point.
+
+**(6) AI-specific adaptation.** This is the most natural model for AI because you can make **data readiness** and **risk** first-class weighted criteria rather than bolt-ons.
+
+**(7) Limitations.** Weight-setting is subjective and politically negotiable; criteria can overlap (double-counting); more setup than ICE/RICE.
+
+**(8) Selection guidance.** Choose when strategic priorities must be explicit and auditable, when stakeholders need to *see* their priorities reflected in the weights, or when AI-specific factors (data, risk, reuse) deserve formal weight. Best for a governance committee that must justify its ranking.
+
+---
+
+## A3·Framework 4 — MoSCoW
+
+**(1) Origin.** Dai Clegg (Oracle), 1994; core to DSDM/Agile.
+
+**(2) Mechanism.** Sort items into four commitment categories rather than ranking them numerically.
+
+**(3) Exact categories.** **Must have** (non-negotiable for this release), **Should have** (important, not vital), **Could have** (desirable if capacity allows), **Won't have (this time)** (explicitly deferred).
+
+**(5) Worked example.** Phase-1 AI rollout: *Must* = acceptable-use training + two anchor use cases per function; *Should* = department prompt libraries; *Could* = a comparison-challenge leaderboard; *Won't (now)* = agentic auto-actions.
+
+**(6) AI-specific adaptation.** Useful for scoping *what a pilot commits to* and for managing stakeholder expectations about deferred AI capabilities.
+
+**(7) Limitations.** **No ranking within a category** — ten "Must haves" are unordered; "Must" inflation is common. Not a portfolio-value tool.
+
+**(8) Selection guidance.** Use MoSCoW for release/sprint scoping and expectation-setting, layered *on top of* a value-ranking model — not as a substitute for RICE/weighted scoring.
+
+---
+
+## A3·Framework 5 — Value-vs-Feasibility / Impact-vs-Effort 2×2 (Gartner-style)
+
+**(1) Origin.** Classic 2×2 prioritization matrix; Gartner applies a value-vs-feasibility version specifically to AI use-case portfolios.
+
+**(2) Mechanism.** Plot each candidate on two axes — value (vertical) and feasibility/ease (horizontal) — creating four quadrants.
+
+**(3) Exact quadrants.** **Quick Wins** (high value / high feasibility — do first); **Big Bets / Major Projects** (high value / low feasibility — plan deliberately); **Fill-ins / Maybes** (low value / high feasibility — spare capacity); **Money Pits / Time Sinks** (low value / low feasibility — avoid/kill).
+
+**(5) Worked example.** Gartner's 2025 retail assessment evaluated 20 non-generative AI use cases on feasibility and business-value axes; the structured plot *"eliminates low-signal investments before pilot spend is committed."* In a copilot rollout, "summarize internal docs" lands Quick Win; "agentic supply-chain rebalancing" lands Big Bet.
+
+**(6) AI-specific adaptation.** Use the feasibility axis to fold in data readiness and model maturity; the matrix is excellent for executive communication of an AI portfolio at a glance.
+
+**(7) Limitations.** Coarse (two dimensions only); placement is judgment-based; hides magnitude differences within a quadrant.
+
+**(8) Selection guidance.** Use as the *visual executive layer* over a numeric model — RICE/weighted scoring decides the ranking; the 2×2 communicates it. Faster than RICE for a quick whiteboard session.
+
+---
+
+## A3·Framework 6 — Gartner AI Project-Prioritization Funnel
+
+**(1) Origin.** Gartner AI strategy guidance.
+
+**(2) Mechanism.** Progressive narrowing — start from 100+ ideas and ruthlessly eliminate at each gate down to 3–5 fundable initiatives, applying the Defend/Extend/Upend lens and value/feasibility scoring at each stage.
+
+**(3) Exact logic.** Funnel stages cull on successively harder criteria (strategic fit → value → feasibility → risk/cost). Gartner's caution underscores the discipline: per its June 2025 press release, *"over 40% of agentic AI projects will be canceled by the end of 2027, due to escalating costs, unclear business value or inadequate risk controls."*
+
+**(6) AI-specific adaptation.** Built for AI; especially relevant given "agent washing" — Gartner estimates only ~130 of thousands of self-described agentic-AI vendors are genuine, so the funnel's later gates should test vendor/technical reality.
+
+**(7) Limitations.** Requires enough idea volume to be worth funneling; gate criteria must be pre-agreed or the culling becomes political.
+
+**(8) Selection guidance.** Use when you have *many* candidate ideas and need a defensible whittling process feeding a stage-gate (A4).
+
+---
+
+## A3·Framework 7 — Kano Model
+
+**(1) Origin.** Noriaki Kano, 1984.
+
+**(2) Mechanism.** Classifies *features* by the type of customer satisfaction they produce, via paired functional/dysfunctional survey questions.
+
+**(3) Exact categories.** **Basic/Must-be** (absence causes dissatisfaction, presence is expected), **Performance/One-dimensional** (satisfaction scales linearly with the feature), **Excitement/Delighter** (unexpected, disproportionately delights), plus Indifferent and Reverse.
+
+**(5) Worked example.** For a member-facing AI assistant: accurate answers = Basic; faster resolution = Performance; proactive personalized suggestions = Delighter.
+
+**(6) AI-specific adaptation.** Relevant when prioritizing *user-facing AI features*, less so for internal-productivity portfolios.
+
+**(7) Limitations.** Survey-dependent; classifications drift over time (today's delighter becomes tomorrow's basic — true of most AI features); not a portfolio-ranking tool.
+
+**(8) Selection guidance.** Use alongside RICE when the candidates are customer-facing AI *features* whose value depends on satisfaction type, not just magnitude.
+
+---
+
+## A3·AI-Specific Overlays (layer onto any model above)
+
+- **Data-availability gate** — a hard minimum data-readiness score; below it, the candidate cannot advance regardless of value. (Addresses the #1 scaling failure.)
+- **Model-risk multiplier** — discount the score for candidates with high hallucination/consequence risk (e.g., multiply by 0.7 for high model risk), forcing higher value to compensate.
+- **Regulatory-exposure factor** — down-rank or route-to-deeper-review candidates touching consequential decisions about people or customer-facing disclosure duties.
+- **Reusability/leverage bonus** — up-rank candidates whose prompts/patterns generalize across functions (a force-multiplier in an enablement program).
+
+| Model | Formula / mechanism | Dimensions | Strength | Weakness | Best for |
+|---|---|---|---|---|---|
+| **RICE** | (R×I×C)/E | Reach, Impact, Confidence, Effort | Objective, ranked, handles uncertainty | False precision; gameable; assumes shared goal | Comparable portfolio vs one goal |
+| **ICE** | I×C×E | Impact, Confidence, Ease | Fast, light | No reach; easy-win bias | Quick low-stakes triage |
+| **Weighted Scoring** | Σ(weight×score) | Custom 4–6 | Encodes strategy; AI factors first-class | Subjective weights; overlap | Auditable committee ranking |
+| **MoSCoW** | Categorical | Must/Should/Could/Won't | Simple; expectation-setting | No intra-rank; "Must" inflation | Release scoping |
+| **Value×Feasibility 2×2** | Quadrant plot | Value, Feasibility | Visual; executive-friendly | Coarse; hides magnitude | Communicating a portfolio |
+| **Gartner Funnel** | Progressive culling | Multi-gate | Handles many ideas | Needs idea volume | Whittling 100→5 |
+| **Kano** | Satisfaction typing | Basic/Perf/Delight | Reveals feature *type* | Survey-bound; drifts | User-facing AI features |
+
+---
+
+# LEAF A4 — GOVERNANCE PROCESS (use-case lifecycle)
+
+**What this leaf must accomplish.** A governed path that moves a use case **idea → scoped → approved → piloted → scaled**, with explicit gates, named decision rights, and a standing body to run it. Four framework families combine: stage-gate (the path), NIST GOVERN (the policy/accountability spine), ISO 42001 (the management-system wrapper), and decision-rights models (who decides at each gate). Then board design.
+
+---
+
+## A4·Framework 1 — Stage-Gate® (Phase-Gate)
+
+**(1) Origin.** **Robert G. Cooper**, 1980s; the canonical new-product-development process, since adapted across portfolio governance.
+
+**(2) Mechanism.** Work proceeds through **stages** (cross-functional work) separated by **gates** (go/kill/hold/recycle decisions). Each gate has defined **deliverables** (what must be shown), **criteria** (must-meet and should-meet), and an **output** (decision + resource commitment for the next stage). Crucially, a gate can **kill** a project — sunk-cost discipline is the point.
+
+**(3) Exact stages → AI use-case lifecycle.** Cooper's generic stages (Discovery → Scoping → Build Business Case → Development → Testing & Validation → Launch) map cleanly onto an AI lifecycle:
+- **Gate 0 / Idea** — intake form submitted (A1).
+- **Stage 1 Scoping → Gate 1** — A2 scoping KPIs scored; pass the cut score and data/risk gates.
+- **Stage 2 Business case → Gate 2 (Approve to pilot)** — value sized, risk assessed, oversight model set; decision body approves.
+- **Stage 3 Pilot/MVP → Gate 3 (Scale decision)** — measured against pilot exit criteria (Section B).
+- **Stage 4 Scale/BAU.**
+This mirrors **McKinsey's Pilot → MVP → Full-scale staging with decision gates**, where "projects advance only when signals at one layer credibly support moving to the next," and "if ROI is not evident at this stage, it is a signal to refine or stop before full-scale investment."
+
+**(5) Worked example.** Vendor-letter assistant clears Gate 1 (value 6 hrs/wk, data available, risk = pricing-leakage mitigated by human sign-off), is approved at Gate 2 for an 8-week pilot with 15 buyers, and at Gate 3 is measured on adoption + time-saved before any enterprise rollout.
+
+**(6) AI-specific adaptation.** Add AI-native gate criteria — model-evaluation results, hallucination/error rate, and *risk clearance* — alongside business value. Treat "scale vs fix vs kill" as the explicit Gate 3 decision.
+
+**(7) Limitations.** Can become bureaucratic/slow if gates are heavyweight; classic Stage-Gate was built for physical products and needs lightening for fast software/AI iteration (hence "lean" and "Agile-Stage-Gate" variants).
+
+**(8) Selection guidance.** Use Stage-Gate as the *process skeleton* for the lifecycle; keep gates lightweight and risk-tiered for a Phase-1 pilot so governance enables rather than throttles.
+
+---
+
+## A4·Framework 2 — NIST AI RMF "GOVERN" Function (the accountability spine)
+
+**(1) Origin.** NIST AI RMF 1.0 (2023). GOVERN is the **cross-cutting** function — "infused throughout AI risk management" — that makes MAP/MEASURE/MANAGE repeatable. It is *the* answer to "who approves, under what policy, with what accountability."
+
+**(2) Mechanism.** GOVERN establishes culture, policy, accountability structures, roles, and third-party controls that sit *above* the use-case lifecycle and govern every gate. It has **6 categories and 19 subcategories**.
+
+**(3) Exact subcategories (verbatim from NIST AI 100-1, Table 1) most relevant to lifecycle governance:**
+- **Govern 1.1** — "Legal and regulatory requirements involving AI are understood, managed, and documented."
+- **Govern 1.3** — "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance." *(→ risk-tiered gates.)*
+- **Govern 1.5** — "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review."
+- **Govern 1.6** — "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities." *(→ the use-case registry.)*
+- **Govern 1.7** — "Processes and procedures are in place for decommissioning and phasing out AI systems safely…" *(→ the kill/retire gate.)*
+- **Govern 2.1** — "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear…" *(→ decision rights.)*
+- **Govern 2.2** — "The organization's personnel and partners receive AI risk management training…"
+- **Govern 2.3** — "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment." *(→ named executive accountability at the top gate.)*
+- **Govern 3.2** — "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems."
+- **Govern 4.1–4.3** — critical-thinking/safety-first culture; documenting risks/impacts; enabling testing, incident identification, and information sharing.
+- **Govern 5.1–5.2** — collecting and integrating external/stakeholder feedback.
+- **Govern 6.1–6.2** — third-party/supply-chain risk policies and contingency for high-risk third-party failures. *(→ vendor/connector governance.)*
+
+**(5) Worked example.** A review board chartered under Govern 2.1/2.3 (documented roles; executive owns the top decision), running a registry under Govern 1.6, with risk-tiered review depth under Govern 1.3, and a connector-approval policy under Govern 6.1.
+
+**(6) AI-specific adaptation.** GOVERN is AI-native. Extend with the GenAI Profile (AI 600-1) for generative-specific policies (provenance, disclosure).
+
+**(7) Limitations.** Outcomes, not procedures — you must instantiate the actual board, RACI, and policies. No certification.
+
+**(8) Selection guidance.** Use GOVERN as the *content checklist* for your governance operating model; pair with ISO 42001 if you want a certifiable wrapper.
+
+---
+
+## A4·Framework 3 — ISO/IEC 42001 Governance Structure (the management-system wrapper)
+
+**(1) Origin.** ISO/IEC 42001:2023 (see A1·Framework 2).
+
+**(2) Mechanism.** Provides a **Plan-Do-Check-Act** management system: leadership commitment and AI policy (Clause 5), risk/impact assessment and objectives (Clause 6), resources/competence/training (Clause 7), operational lifecycle controls (Clause 8), monitoring/internal audit/management review (Clause 9), and corrective action/continual improvement (Clause 10). This is the governance *operating system* that makes the lifecycle auditable.
+
+**(3) Exact structure.** Clauses 4–10 (mandatory) + 38 Annex A controls across 9 objectives. Governance-critical controls: A.2 (AI policy), A.3 (internal organization/roles), A.5 (impact assessment), A.6 (AI system life cycle), A.9/A.10 (third-party and downstream-use). A **Statement of Applicability** documents which controls apply and why.
+
+**(5) Worked example.** The same review board, but now chartered as part of a certifiable AIMS: AI policy under Clause 5, the use-case impact assessments under A.5, lifecycle gate controls under A.6, and an internal audit under Clause 9 verifying the gates were actually applied.
+
+**(6) AI-specific adaptation.** Native; use ISO/IEC 42005 for impact-assessment methodology and 23894 for risk management.
+
+**(7) Limitations.** Certification effort and documentation overhead; principle-based controls need local specification.
+
+**(8) Selection guidance.** Choose when certification, procurement expectations, or a formal management system matter; otherwise adopt its *disciplines* (policy, impact assessment, audit) without full certification.
+
+---
+
+## A4·Decision-Rights Frameworks — RACI vs RAPID vs DACI (compared in depth)
+
+Gates need unambiguous decision rights, or they stall. Three models dominate; they are *not* interchangeable.
+
+### RACI (task-centric)
+- **(1) Origin.** Long-standing project-management responsibility-assignment matrix.
+- **(2)(3) Roles.** **Responsible** (does the work — can be several), **Accountable** (owns the outcome — *exactly one* per task, the "one-accountable rule"), **Consulted** (two-way input before action), **Informed** (one-way, kept in the loop).
+- **(5) AI application.** Best for **ongoing operational responsibilities** — e.g., who maintains the prompt library (R), who owns adoption metrics (A), who is consulted on data classification (C), who is informed of incidents (I).
+- **(7) Limitation.** It assigns *task* responsibility, not *decision* authority; it doesn't model who can veto a decision. Over-use produces "everyone Consulted" sludge.
+- **(8) Use when.** Mapping who-does-what across a workstream, not who-decides at a gate.
+
+### RAPID® (decision-centric, with explicit veto)
+- **(1) Origin.** **Bain & Company**; popularized by Paul Rogers & Marcia Blenko in the *Harvard Business Review* article **"Who Has the D?"** (2006).
+- **(2)(3) Roles** (the letters are a loose acronym, not a sequence): **Recommend** (drives the proposal and analysis), **Agree** (must formally sign off — *an explicit veto right*), **Perform** (executes once decided), **Input** (consulted for facts/feasibility, non-binding), **Decide** (the single decision-maker — "the D").
+- **(5) AI application.** Best for **high-stakes gate decisions**. Example for "approve customer-facing GenAI to pilot": Recommend = AI enablement lead; **Agree = Legal + Security** (real veto on a customer-facing system); Input = affected business unit; Decide = the AI governance board chair/executive; Perform = the delivery team.
+- **(7) Limitation.** Heavier to set up; the explicit "Agree" veto can slow decisions (which is sometimes correct).
+- **(8) Use when.** Multi-stakeholder, irreversible, or risk-laden decisions where second-line functions (legal/risk/security) genuinely hold a veto. The **"Agree" role maps precisely onto AI second-line controls**, which is why RAPID fits AI gates better than RACI.
+
+### DACI (decision-centric, no explicit veto)
+- **(1) Origin.** Popularized by Intuit/Atlassian.
+- **(2)(3) Roles.** **Driver** (moves the decision forward), **Approver** (makes the final call — usually one), **Contributors** (provide expertise/input), **Informed** (notified of the outcome).
+- **(5) AI application.** A lighter middle ground for routine gate decisions where you want a clear single Approver without formalizing vetoes — e.g., approving low-risk internal use cases to pilot.
+- **(7) Limitation.** No explicit veto means high-risk decisions may under-weight legal/security objections; less suited to consequential customer-facing AI.
+- **(8) Use when.** You need decisive single-approver clarity with speed, for low/medium-risk decisions.
+
+| Model | Centric on | Single owner role | Explicit veto? | Best AI use |
+|---|---|---|---|---|
+| **RACI** | Tasks | Accountable (1) | No | Ongoing operational ownership |
+| **RAPID** | Decisions | Decide (1) | **Yes — "Agree"** | High-stakes / customer-facing gates |
+| **DACI** | Decisions | Approver (1) | No | Fast low/medium-risk gate decisions |
+
+**Recommended pattern:** **RAPID (or DACI) for gate decisions, RACI for operational responsibilities** — they are complementary, not competing.
+
+---
+
+## A4·AI Governance Review Boards / Intake Committees (board design)
+
+**Composition.** Cross-functional by design: AI/enablement lead, data science/engineering, legal, privacy, security, plus business-line representation and (for higher-risk) ethics/risk. **Tier the board by risk** (Govern 1.3): low-risk use cases get a light-touch single-reviewer path; high-risk/novel ones get full-board review.
+
+**Cadence & decision rights.** A regular cadence (e.g., biweekly intake triage, monthly full board) with pre-published criteria so decisions are consistent (inter-rater reliability). Decision rights documented per Govern 2.1, with executive accountability per Govern 2.3.
+
+**Real-world reference structures (as design illustrations, not endorsements).**
+- **Google** operates a **multi-tier review structure** — a central responsible-innovation operations team for day-to-day review, a panel of senior experts for harder cases, and a senior-executive council for the most consequential decisions. The lesson: *escalation tiers by stakes*.
+- **Salesforce** runs an **Office of Ethical & Humane Use** that reports up to a Board committee. The lesson: *a standing, named function with a reporting line into governance*, not an ad-hoc committee.
+
+**Design principle.** The board exists to make the stage-gates real: it owns Gates 2 and 3, applies the A2/A3 scoring as evidence, uses RAPID/DACI for the decision, and records everything in the registry (Govern 1.6) — closing the loop from intake (A1) through prioritization (A3) to a governed decision.
+
+---
+
+### Section A — sources (primary anchors)
+NIST AI RMF 1.0 / NIST AI 100-1 (Jan 2023) and the AI RMF Playbook (airc.nist.gov) — verbatim GOVERN and MAP subcategories; NIST AI 600-1 Generative AI Profile (Jul 2024); ISO/IEC 42001:2023 (Clauses 4–10, Annex A — 38 controls/9 objectives, A.5 impact assessment) and companions ISO/IEC 42005, 23894; Intercom blog — Sean McBride, "RICE: Simple prioritization for product managers" (2018, exact scales); Bain/HBR "Who Has the D?" (RAPID); Robert G. Cooper (Stage-Gate®); Gartner public releases (Jun 2025 agentic-AI cancellation forecast; retail use-case assessment); McKinsey, *The economic potential of generative AI* (Jun 2023). Secondary/practitioner sources (Trustible, RAI Institute, ProductPlan, and ISO-implementation vendors) are used for operational detail and flagged as such.
+
+---
+
+*End of Section A (Pass 1 of 3). Sections B (measurement) and C (risk & appropriate-use) follow in the same eight-part, per-framework depth, after which all three compile into the single Word deliverable.*
